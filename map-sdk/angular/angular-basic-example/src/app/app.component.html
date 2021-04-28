@@ -1,0 +1,22 @@
+<div class="overlay-container">
+  <h4>Embedding an Unfolded Map using the Map SDK with Angular</h4>
+  <div *ngIf='!isLoaded' id="loader"></div>
+  <div *ngIf='isLoaded' id="button-container">
+    <button class="btn btn-primary btn-lg btn-square" (click)="goTo('sf')">SAN FRANCISCO</button>
+    <button class="btn btn-primary btn-lg btn-square" (click)="goTo('la')">LOS ANGELES</button>
+    <button class="btn btn-primary btn-lg btn-square" (click)="goTo('ny')">NEW YORK</button>
+    <button class="btn btn-primary btn-lg btn-square" (click)="getLayers()">GET LAYERS</button>
+    <div id="sdk-layers" *ngIf='layers.length'>
+      <label class='toggle-label'>Toggle layer visibility</label>
+      <div class="checkbox-group" *ngFor="let layer of layers">
+        <label class="switch">
+          <input type="checkbox" [checked]="layer.isVisible" (change)="setLayerVisibility(layer.id)" />
+          <span class="slider round"></span>
+        </label>
+        <label class="switch-label">
+          <div>{{layer.label}}</div>
+        </label>
+      </div>
+    </div>
+  </div>
+<div>
