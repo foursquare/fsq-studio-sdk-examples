@@ -15,7 +15,7 @@ This repository contains sample code for [Unfolded](https://unfolded.ai) APIs, i
 
 ![Map SDK Preview](images/out.gif)
 
-The Unfolded map SDK lets you embed and control Unfolded maps from
+The Unfolded Map SDK lets you embed and control Unfolded maps from:
 
 - Your own web pages, using the [JavaScript Map SDK](https://docs.unfolded.ai/map-sdk/javascript-map-sdk).
 - Jupyter notebooks, using the [Python Map SDK](https://docs.unfolded.ai/map-sdk/python-map-sdk).
