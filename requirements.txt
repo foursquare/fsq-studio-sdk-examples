@@ -1,3 +1,5 @@
 unfolded.map-sdk
 unfolded.data-sdk
 sidecar
+pandas
+ipywidgets
