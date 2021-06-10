@@ -1,5 +1,5 @@
-unfolded.map-sdk
-unfolded.data-sdk
+unfolded.map-sdk>=0.2.0
+unfolded.data-sdk>=0.4.1
 sidecar
 pandas
 ipywidgets
