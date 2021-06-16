@@ -139,3 +139,9 @@ cython_debug/
 
 .DS_Store
 .idea
+
+node_modules
+
+# Generated CSS
+map-sdk/js/custom-example/style.css.map
+map-sdk/js/custom-example/style.css
