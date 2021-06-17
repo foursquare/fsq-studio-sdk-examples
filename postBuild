@@ -1,0 +1,2 @@
+jupyter labextension install plotlywidget
+jupyter labextension install jupyterlab-plotly
