@@ -3,3 +3,4 @@ unfolded.data-sdk>=0.4.1
 sidecar
 pandas
 ipywidgets
+plotly
