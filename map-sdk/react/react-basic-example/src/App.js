@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {createMap, setViewState, getLayers, setLayerVisibility} from '@unfolded/map-sdk';
 
 import './App.scss';
