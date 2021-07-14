@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Customer Website</title>
+  <link
+      href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css"
+      rel="stylesheet"
+    />
+  <script
+    src="https://kit.fontawesome.com/d4bd3f72b7.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@unfolded/map-sdk@0.2.2/dist/unfolded-sdk.min.js"></script>
+</head>
+<body>
+<div class="unfolded">
+  <div class="sidemenu">
+    <div class="header">
+      <img
+        class="logo-image"
+        alt="company-logo"
+        src="your-company-logo-here.png"
+      />
+    </div>
+    <div id="loader"></div>
+    <div id="content">
+      <h2>Demo Application</h2>
+      <label class="subtitle">Built by <a href="https://docs.unfolded.ai/map-sdk" target="_blank">Unfolded Map SDK</a></label>
+      <p class="description">
+        Demonstrating the possiblities of customizing Unfolded Studio using the Map SDK.
+      </p>
+      <p class="description-small">
+        The Unfolded Map SDK can be used directly in a standard HTML + JavaScript web page using the JavaScript version of the Map SDK. The Map SDK enables you to use Unfolded maps as a controllable UI component.
+      </p>
+    </div>
+    <div class="footer">
+      <img alt="unfolded-logo" src="https://cdn.unfolded.ai/statics/unfolded-logo-black.png" />
+    </div>
+  </div>
+</div>
+
+<div id='tooltip'>
+  <a id="tooltip-close" onclick="closeTooltip()">x</a>
+  <p id="tooltip-title"></p>
+  <p id="tooltip-country"></p>
+  <img id="tooltip-image"/>
+  <p id="tooltip-description"></p>
+</div>
+
+<script>
+  const tooltip = document.getElementById('tooltip');
+  const unfoldedMap = new UnfoldedMap({
+    mapUUID: 'fb6aad80-eb4c-4f33-86eb-668772cc5fc4',
+    embed: true,
+    onLoad: () => {
+      console.log('%cUnfoldedMap: ' + '%cMap has loaded...', 'color: violet;', 'color: yellow;');
+      const loader = document.getElementById('loader');
+      loader.style.display = 'none';
+      const contentContainer = document.getElementById('content');
+      contentContainer.style.display = 'initial';
+    },
+    onHover: (event) => {
+      console.log(event);
+      // if the user is not hovering over the layer
+      if (!event.layerId && event.index === -1) {
+        return;
+      }
+      // if the layer data is empty - this happens when the user hovers out from the layer
+      if (!event.data) {
+        return;
+      }
+      positionTooltip(tooltip, event.x, event.y);
+      addTooltipContent(tooltip, event.data, event.coordinate);
+    }
+  });
+  function positionTooltip(tooltip, x, y) {
+    tooltip.style.position = "absolute";
+    tooltip.style.left = x+'px';
+    tooltip.style.top = y+'px';
+    tooltip.style.display = 'block';
+  }
+  function addTooltipContent(tooltip, data, coordinate) {
+    const title = data.data[14],
+          country = data.data[6],
+          description = data.data[2],
+          imgTitle = data.data[14];
+
+    
+    const titleLabel = document.getElementById('tooltip-title');
+    titleLabel.innerHTML = title;
+    titleLabel.removeEventListener('click', positionViewport, false);
+    titleLabel.addEventListener('click', positionViewport);
+    titleLabel.coordinate = coordinate;
+    const countryLabel = document.getElementById('tooltip-country');
+    countryLabel.innerHTML = country;
+    const descLabel = document.getElementById('tooltip-description');
+    descLabel.innerHTML = description;
+    addWikipediaImg(imgTitle);
+  }
+  async function addWikipediaImg(imgTitle) {
+    const img = document.getElementById('tooltip-image');
+    img.style.display = 'none';
+
+    // Get all wiki results for the search query
+    const allWikiResults = await findAllWikiResultsForQuery(imgTitle);
+    // Find the title of the page for the first result in the search and get the image from that page
+    const response = await findFirstWikiImgForTitle(allWikiResults.query.search[0].title);
+  
+    img.src = response.query.pages[Object.keys(response.query.pages)[0]].original.source;
+    img.style.display = 'initial';
+  }
+  async function findAllWikiResultsForQuery(searchQuery) {
+    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
+    const response = await fetch(endpoint);
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    const json = await response.json();
+    return json;
+  }
+  async function findFirstWikiImgForTitle(title) {
+    const endpoint = `http://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&origin=*&titles=${title}`;
+    const response = await fetch(endpoint);
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    const json = await response.json();
+    return json;
+  }
+  function positionViewport(event) {
+    const coordinate = event.currentTarget.coordinate;
+    unfoldedMap.setViewState({
+      longitude: coordinate[0],
+      latitude: coordinate[1],
+      zoom: 10
+    });
+    // reposition the tooltip in the top right corner
+    positionTooltip(tooltip, window.innerWidth - 360, 100);
+  }
+  function closeTooltip() {
+    tooltip.style.display = 'none';
+  }
+</script>
+</body>
+</html>

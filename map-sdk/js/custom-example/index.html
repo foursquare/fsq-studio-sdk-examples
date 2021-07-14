@@ -47,6 +47,10 @@
         <label class="section-label">Layer controls</label>
         <button id="get-layers">GET LAYERS</button>
         <div id="layers-container"></div>
+        <details open>
+          <summary>JSON response</summary>
+          <pre id="results"></pre>
+        </details>
       </div>
     </div>
     <div class="footer">
@@ -67,12 +71,6 @@
       loader.style.display = 'none';
       const contentContainer = document.getElementById('content');
       contentContainer.style.display = 'initial';
-    },
-    onTimelineIntervalChange: (data) => {
-      console.log(`Starting date: ${new Date(data[0])}, Ending date: ${new Date(data[1])}`);
-    },
-    onLayerTimelineTimeChange: (data) => {
-      console.log(`Current time: ${new Date(data)}`);
     }
   });
 
@@ -127,6 +125,8 @@
       const layerContainer = document.getElementById('layers-container');
       layerContainer.innerHTML = '';
       layerContainer.style.display = 'block';
+      const results = document.getElementById("results");
+      results.innerHTML = JSON.stringify(layers, null, 2);
       layers.forEach (layer => {
         createLayerItem(layer.label, layer.id, layer.isVisible);
       });
