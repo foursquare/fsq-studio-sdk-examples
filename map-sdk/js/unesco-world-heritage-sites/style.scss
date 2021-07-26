@@ -9,6 +9,44 @@ body {
 body iframe {
   border: none;
 }
+#tooltip {
+  position: absolute;
+  display: none;
+  max-width: 360px;
+  height: auto;
+  background-color: white;
+  padding: 8px;
+  margin-right: 12px;
+  border: 1px solid #b3b3b3;
+  #tooltip-close {
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      color: #1d48e8;
+    }
+  }
+  #tooltip-title {
+    font-size: 16px;
+    margin: 0px;
+    &:hover {
+      cursor: pointer;
+      color: #1d48e8;
+      text-decoration: underline;
+    }
+  }
+  #tooltip-image {
+    width: 100%;
+  }
+  #tooltip-country {
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  #tooltip-description {
+    font-size: 12px;
+  }
+}
 .sidemenu {
   position: absolute;
   display: grid;
@@ -16,7 +54,6 @@ body iframe {
   border: 1px solid #b3b3b3;
   border-radius: 20px;
   overflow: hidden;
-  max-height: 80%;
   width: 360px;
   left: 0;
   top: 0;
@@ -33,7 +70,6 @@ body iframe {
   }
   #content {
     display: none;
-    overflow-y: auto;
     padding: 0px 20px 20px 20px;
     h2 {
       margin: 0px;
@@ -69,7 +105,6 @@ body iframe {
         font-family: 'Graphik Web Semibold';
         font-weight: bold;
         font-size: 12px;
-        margin-bottom: 8px;
         width: 100%;
         letter-spacing: 2px;
         padding: 8px 24px;
@@ -127,20 +162,6 @@ body iframe {
             }
           }
         }
-      }
-      summary {
-        margin-top: 8px;
-        font-size: 14px;
-        cursor: pointer;
-      }
-      pre {
-        white-space: pre-wrap; 
-        background-color: #ececec;
-      }
-      input {
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 16px;
       }
     }
   }
