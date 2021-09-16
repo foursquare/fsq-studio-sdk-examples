@@ -1,2 +1,2 @@
-jupyter labextension install plotlywidget
-jupyter labextension install jupyterlab-plotly
+# jupyter labextension install plotlywidget
+# jupyter labextension install jupyterlab-plotly
