@@ -2,7 +2,6 @@ ipywidgets
 matplotlib
 numpy
 pandas
-pandas
 plotly
 scikit-learn
 scipy
