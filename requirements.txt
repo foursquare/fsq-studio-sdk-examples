@@ -1,6 +1,13 @@
-unfolded.map-sdk>=0.2.1
-unfolded.data-sdk>=0.4.1
-sidecar
-pandas
 ipywidgets
+matplotlib
+numpy
+pandas
+pandas
 plotly
+scikit-learn
+scipy
+seaborn
+sidecar
+tensorflow
+unfolded.data-sdk>=0.4.1
+unfolded.map-sdk>=0.2.1
