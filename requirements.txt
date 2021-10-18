@@ -1,5 +1,8 @@
+catboost
+h3
 ipywidgets
 matplotlib
+missingno
 numpy
 pandas
 plotly
