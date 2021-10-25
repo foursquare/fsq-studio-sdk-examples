@@ -1,10 +1,12 @@
 catboost
+geojson
 h3
 ipywidgets
 matplotlib
 missingno
 numpy
 pandas
+pandas_profiling
 plotly
 scikit-learn
 scipy
