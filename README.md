@@ -28,9 +28,9 @@ The Map SDK makes it easy to:
 - Integrate Unfolded maps into your organization's workflows.
 
 ### JavaScript examples
-[![badges](./images/badges/javascript.svg)](/map-sdk) [![badges](./images/badges/angular.svg)](/map-sdk/angular) [![badges](./images/badges/react.svg)](/map-sdk/react) [![badges](./images/badges/vue.svg)](/map-sdk/vuejs)
+[![badges](./images/badges/javascript.svg)](/map-sdk) [![badges](./images/badges/angular.svg)](/map-sdk/angular) [![badges](./images/badges/react.svg)](/map-sdk/react) [![badges](./images/badges/vue.svg)](/map-sdk/vuejs) [![badges](./images/badges/svelte.svg)](/map-sdk/svelte)
 
-In the [/map-sdk](/map-sdk) directory you can find examples on how to use our Unfolded's Map SDK with [Angular](https://angular.io/), [React](https://reactjs.org/) and [Vue.js](https://vuejs.org/) frameworks.
+In the [/map-sdk](/map-sdk) directory you can find examples on how to use our Unfolded's Map SDK with [Angular](https://angular.io/), [React](https://reactjs.org/), [Vue.js](https://vuejs.org/), and [Svelte](https://svelte.dev/) frameworks.
 All of the examples are based on the respective framework's starter projects with the added Unfolded's Map SDK integration.
 
 Some of the following features are included in the examples:
