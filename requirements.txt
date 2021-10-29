@@ -1,5 +1,6 @@
 catboost
 category-encoders
+dask
 geojson
 h3
 ipywidgets
