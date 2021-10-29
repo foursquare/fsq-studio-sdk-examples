@@ -5,6 +5,7 @@ h3
 ipywidgets
 matplotlib
 missingno
+netCDF4
 numpy
 pandas
 pandas_profiling
