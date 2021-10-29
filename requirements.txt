@@ -1,4 +1,5 @@
 catboost
+category-encoders
 geojson
 h3
 ipywidgets
@@ -13,5 +14,7 @@ scipy
 seaborn
 sidecar
 tensorflow
+torch
 unfolded.data-sdk>=0.4.1
 unfolded.map-sdk>=0.2.1
+xarray
