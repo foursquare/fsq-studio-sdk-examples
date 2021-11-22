@@ -6,7 +6,7 @@
 [binder_badge]: https://mybinder.org/badge_logo.svg
 [binder_jupyterlab_url]: https://mybinder.org/v2/gh/UnfoldedInc/examples/master?urlpath=lab/tree/notebooks/
 [colab_badge]: https://colab.research.google.com/assets/colab-badge.svg
-[colab_url]: https://colab.research.google.com/github/UnfoldedInc/examples/blob/master
+[colab_notebook_link]: https://colab.research.google.com/github/UnfoldedInc/examples/blob/master
 
 This repository contains sample code for [Unfolded](https://unfolded.ai) APIs, including
 
