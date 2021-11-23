@@ -1,7 +1,7 @@
 # Map SDK examples for Jupyter
 
 [![Binder][binder_badge]][binder_jupyterlab_url]
-[![open_in_colab][colab_badge]][colab_notebook_link]
+[![open_in_colab][colab_badge]][colab_url]
 
 This is a collection of example notebooks which illustrate the use of [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk) in Jupyter.
 
