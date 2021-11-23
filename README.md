@@ -1,9 +1,12 @@
 # Unfolded Examples
 
 [![Binder][binder_badge]][binder_jupyterlab_url]
+[![open_in_colab][colab_badge]][colab_notebook_link]
 
 [binder_badge]: https://mybinder.org/badge_logo.svg
 [binder_jupyterlab_url]: https://mybinder.org/v2/gh/UnfoldedInc/examples/master?urlpath=lab/tree/notebooks/
+[colab_badge]: https://colab.research.google.com/assets/colab-badge.svg
+[colab_notebook_link]: https://colab.research.google.com/github/UnfoldedInc/examples/blob/master
 
 This repository contains sample code for [Unfolded](https://unfolded.ai) APIs, including
 
@@ -28,6 +31,7 @@ The Map SDK makes it easy to:
 - Integrate Unfolded maps into your organization's workflows.
 
 ### JavaScript examples
+
 [![badges](./images/badges/javascript.svg)](/map-sdk) [![badges](./images/badges/angular.svg)](/map-sdk/angular) [![badges](./images/badges/react.svg)](/map-sdk/react) [![badges](./images/badges/vue.svg)](/map-sdk/vuejs) [![badges](./images/badges/svelte.svg)](/map-sdk/svelte)
 
 In the [/map-sdk](/map-sdk) directory you can find examples on how to use our Unfolded's Map SDK with [Angular](https://angular.io/), [React](https://reactjs.org/), [Vue.js](https://vuejs.org/), and [Svelte](https://svelte.dev/) frameworks.
