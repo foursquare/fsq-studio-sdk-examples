@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Unfolded Map SDK - getMapConfig/setMapConfig example</title>
+    <link href="https://cdn.unfolded.ai/sdk/examples/style.css" rel="stylesheet" />
+    <link href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@unfolded/map-sdk@0.3.1/dist/unfolded-sdk.min.js"></script>
+  </head>
+  <body>
+    <div class="unfolded">
+      <div class="sidemenu">
+        <div class="header">
+          <img
+            class="logo-image"
+            alt="company-logo"
+            src="https://i.ibb.co/yp2S4r7/your-company-logo-here.png"
+          />
+        </div>
+        <div id="loader"></div>
+        <div id="content">
+          <h2>Demo Application</h2>
+          <label class="subtitle"
+            >Built by
+            <a href="https://docs.unfolded.ai/map-sdk" target="_blank">Unfolded Map SDK</a></label
+          >
+          <p class="description">
+            Demonstrating the possiblities of customizing Unfolded Studio using the Map SDK.
+          </p>
+          <p class="description-small"><code>getMapConfig()</code> - Gets the map configuration.</p>
+          <p class="description-small"><code>setMapConfig()</code> - Sets the map configuration.</p>
+          <div class="content-section">
+            <label class="section-label">Controls</label>
+            <button id="get-map-config">GET MAP CONFIGURATION</button>
+            <button id="set-map-config">SET MAP CONFIGURATION</button>
+            <details open>
+              <summary>JSON response</summary>
+              <pre id="results"></pre>
+            </details>
+          </div>
+        </div>
+        <div class="footer">
+          <img alt="unfolded-logo" src="https://cdn.unfolded.ai/statics/unfolded-logo-black.png" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let mapConfig;
+      const unfoldedMap = new UnfoldedMap({
+        mapUUID: '9e495adb-e43a-4db2-b35d-5de23c10cbd7',
+        embed: true,
+        onLoad: () => {
+          console.log(
+            '%cUnfoldedMap: ' + '%cMap has loaded...',
+            'color: violet;',
+            'color: yellow;'
+          );
+          const loader = document.getElementById('loader');
+          loader.style.display = 'none';
+          const contentContainer = document.getElementById('content');
+          contentContainer.style.display = 'initial';
+        }
+      });
+
+      const getMapConfigBtn = document.getElementById('get-map-config');
+      getMapConfigBtn.onclick = function (e) {
+        unfoldedMap.getMapConfig().then(data => {
+          mapConfig = data;
+          const results = document.getElementById('results');
+          results.innerHTML = JSON.stringify(data, null, 2);
+        });
+      };
+
+      const setMapConfigBtn = document.getElementById('set-map-config');
+      setMapConfigBtn.onclick = function (e) {
+        // change the map style to 'light'
+        if (mapConfig) {
+          mapConfig.config.mapStyle.styleType = 'light';
+          unfoldedMap.setMapConfig(mapConfig);
+        }
+      };
+    </script>
+  </body>
+</html>

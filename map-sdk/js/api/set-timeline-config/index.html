@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Unfolded Map SDK - setTimelineConfig example</title>
+    <link href="https://cdn.unfolded.ai/sdk/examples/style.css" rel="stylesheet" />
+    <link href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@unfolded/map-sdk@0.3.1/dist/unfolded-sdk.min.js"></script>
+  </head>
+  <body>
+    <div class="unfolded">
+      <div class="sidemenu">
+        <div class="header">
+          <img
+            class="logo-image"
+            alt="company-logo"
+            src="https://i.ibb.co/yp2S4r7/your-company-logo-here.png"
+          />
+        </div>
+        <div id="loader"></div>
+        <div id="content">
+          <h2>Demo Application</h2>
+          <label class="subtitle"
+            >Built by
+            <a href="https://docs.unfolded.ai/map-sdk" target="_blank">Unfolded Map SDK</a></label
+          >
+          <p class="description">
+            Demonstrating the possiblities of customizing Unfolded Studio using the Map SDK.
+          </p>
+          <p class="description-small">
+            <code>setTimelineConfig()</code> - Sets time filter timeline configuration that allows
+            us to set timeline visibility, play/pause the animation, set the speed, set the time
+            interval, change the time format and timezone.
+          </p>
+          <div class="content-section">
+            <label class="section-label">Timeline controls</label>
+            <button id="set-time">SET TIME INTERVAL</button>
+            <button isVisible="true" id="toggle-visibility">TOGGLE TIMELINE VISIBILITY</button>
+            <button isAnimating="false" id="toggle-animation">TOGGLE TIMELINE ANIMATION</button>
+            <button id="set-speed">SET TIMELINE SPEED - 0.3x</button>
+            <button id="set-timezone">SET TIMEZONE</button>
+            <button id="set-time-format">SET TIME FORMAT</button>
+          </div>
+        </div>
+        <div class="footer">
+          <img alt="unfolded-logo" src="https://cdn.unfolded.ai/statics/unfolded-logo-black.png" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const unfoldedMap = new UnfoldedMap({
+        mapUUID: '9e495adb-e43a-4db2-b35d-5de23c10cbd7',
+        embed: true,
+        onLoad: () => {
+          console.log(
+            '%cUnfoldedMap: ' + '%cMap has loaded...',
+            'color: violet;',
+            'color: yellow;'
+          );
+          const loader = document.getElementById('loader');
+          loader.style.display = 'none';
+          const contentContainer = document.getElementById('content');
+          contentContainer.style.display = 'initial';
+        }
+      });
+
+      const setTimeBtn = document.getElementById('set-time');
+      setTimeBtn.onclick = function (e) {
+        const startTime = new Date('2020.10.29').getTime();
+        const endTime = new Date('2020.10.31').getTime();
+        const config = {
+          idx: 0,
+          currentTimeInterval: {
+            startTime: startTime,
+            endTime: endTime
+          }
+        };
+        unfoldedMap.setTimelineConfig(config).then(data => {
+          console.log(data);
+        });
+      };
+
+      const toggleVisibilityBtn = document.getElementById('toggle-visibility');
+      toggleVisibilityBtn.onclick = function (e) {
+        const isVisibleStr = toggleVisibilityBtn.getAttribute('isVisible');
+        let isVisible = isVisibleStr === 'true';
+        unfoldedMap
+          .setTimelineConfig({idx: 0, isVisible: !isVisible})
+          .then(data => console.log(data));
+        toggleVisibilityBtn.setAttribute('isVisible', !isVisible);
+      };
+
+      const toggleAnimationBtn = document.getElementById('toggle-animation');
+      toggleAnimationBtn.onclick = function (e) {
+        const isAnimatingStr = toggleAnimationBtn.getAttribute('isAnimating');
+        let isAnimating = isAnimatingStr === 'true';
+        unfoldedMap
+          .setTimelineConfig({idx: 0, isAnimating: !isAnimating})
+          .then(data => console.log(data));
+        toggleAnimationBtn.setAttribute('isAnimating', !isAnimating);
+      };
+
+      const setSpeedBtn = document.getElementById('set-speed');
+      setSpeedBtn.onclick = function (e) {
+        const config = {
+          idx: 0,
+          speed: 0.3
+        };
+        unfoldedMap.setTimelineConfig(config).then(data => {
+          console.log(data);
+        });
+      };
+
+      const setTimezoneBtn = document.getElementById('set-timezone');
+      setTimezoneBtn.onclick = function (e) {
+        const config = {
+          idx: 0,
+          timezone: 'Europe/Berlin'
+        };
+        unfoldedMap.setTimelineConfig(config).then(data => {
+          console.log(data);
+        });
+      };
+
+      const setTimeFormatBtn = document.getElementById('set-time-format');
+      setTimeFormatBtn.onclick = function (e) {
+        const config = {
+          idx: 0,
+          timeFormat: 'DD.MM.YYYY. HH:mm'
+        };
+        unfoldedMap.setTimelineConfig(config).then(data => {
+          console.log(data);
+        });
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Unfolded Examples</title>
+    <link href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/d4bd3f72b7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <div class="logo">
+          <svg viewBox="0 0 202 175" class="data-ex-icons-unfolded" style="fill: currentcolor">
+            <path
+              d="M100.6 87.13 50.31 174.25 0 87.13 50.3 0 67.94 30.54 35.27 87.13 49.69 112.11 82.36 55.52 100.6 87.13Z"
+              fill="#1e4dff"
+            ></path>
+            <path d="M67.94 30.54 168.61 30.54 150.98 0 50.3 0 67.94 30.54" fill="#5cbbff"></path>
+            <path d="M201.22,87.13l0-.06L183,55.52H82.36L100.6,87.13Z" fill="#5cbbff"></path>
+            <path d="M164.67,87.12,146,119.66l55.21-32.54Z" fill="#090b66"></path>
+            <path
+              d="M201.21 87.15 150.91 174.25 132.7 142.71 146.07 119.64 201.21 87.15Z"
+              fill="#5558db"
+            ></path>
+          </svg>
+        </div>
+        <h1 class="title">Unfolded Studio - Map SDK Examples</h1>
+        <div class="navigation-tabs">
+          <button id="btn-1" class="active" onclick="showTab('tab-1')">JavaScript</button>
+          <button id="btn-2" onclick="showTab('tab-2')">Jupyter Notebooks</button>
+        </div>
+      </div>
+
+      <section id="tab-container">Click on the tabs</section>
+      <section id="tab-1" style="visibility: hidden">
+        <h2 class="subtitle">API Functions</h2>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Docs</th>
+              <th>Open in GitHub</th>
+              <th>Open in VS Code</th>
+              <th>Run the example</th>
+            </tr>
+          </thead>
+          <tbody id="table-js-api"></tbody>
+        </table>
+
+        <h2 class="subtitle">JS Frameworks</h2>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Docs</th>
+              <th>Open in GitHub</th>
+              <th>Open in VS Code</th>
+              <th>Run the example</th>
+            </tr>
+          </thead>
+          <tbody id="table-js-frameworks"></tbody>
+        </table>
+      </section>
+      <section id="tab-2" style="visibility: hidden"></section>
+    </div>
+
+    <script>
+      fetch('src/toc.json', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        }
+      })
+        .then(response => response.json())
+        .then(json => {
+          updateTable(json.javascript.api, 'table-js-api');
+          updateTable(json.javascript.frameworks, 'table-js-frameworks');
+          showTab('tab-1');
+        });
+
+      function updateTable(tocData, id) {
+        const tBody = document.getElementById(id);
+        const tableData = tocData
+          .map(item => {
+            return `
+              <tr>
+                <td class="desc"><pre>${item.description}</pre></td>
+                <td>
+                  <a href='${item.docsUrl}'>
+                    <i class="fas fa-book"></i>
+                  </a>
+                </td>
+                <td>
+                  <a href='${item.githubUrl}'>
+                    <i class="fab fa-github"></i>
+                  </a>
+                </td>
+                <td>
+                  <a href='${item.vscodeUrl}'>
+                    <i class="fas fa-code"></i>
+                  </a>
+                </td>
+                <td>
+                  <a href='${item.exampleUrl}'>
+                    <i class="fas fa-laptop-code"></i>
+                  </a>
+                </td>
+              </tr>
+            `;
+          })
+          .join('');
+
+        tBody.innerHTML = tableData;
+      }
+      function showTab(tab) {
+        switch (tab) {
+          case 'tab-1':
+            document.getElementById('tab-container').innerHTML =
+              document.getElementById('tab-1').innerHTML;
+            document.getElementById('btn-2').classList.remove('active');
+            document.getElementById('btn-1').classList.add('active');
+            break;
+          case 'tab-2':
+            document.getElementById('tab-container').innerHTML =
+              document.getElementById('tab-2').innerHTML;
+            document.getElementById('btn-1').classList.remove('active');
+            document.getElementById('btn-2').classList.add('active');
+            break;
+          default:
+            document.getElementById('tab-container').innerHTML =
+              document.getElementById('tab-1').innerHTML;
+            document.getElementById('btn-2').classList.remove('active');
+            document.getElementById('btn-1').classList.add('active');
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Unfolded Map SDK - refreshMapData example</title>
+    <link href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css" rel="stylesheet" />
+    <link href="https://cdn.unfolded.ai/sdk/examples/style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@unfolded/map-sdk@0.3.1/dist/unfolded-sdk.min.js"></script>
+  </head>
+  <body>
+    <div class="unfolded">
+      <div class="sidemenu">
+        <div class="header">
+          <img
+            class="logo-image"
+            alt="company-logo"
+            src="https://i.ibb.co/yp2S4r7/your-company-logo-here.png"
+          />
+        </div>
+        <div id="loader"></div>
+        <div id="content">
+          <h2>Demo Application</h2>
+          <label class="subtitle"
+            >Built by
+            <a href="https://docs.unfolded.ai/map-sdk" target="_blank">Unfolded Map SDK</a></label
+          >
+          <p class="description">
+            Demonstrating the possiblities of customizing Unfolded Studio using the Map SDK.
+          </p>
+          <p class="description-small">
+            <code>refreshMapData()</code> - Reloads the data displayed on the map. Useful to use if
+            your data is updated frequently.
+          </p>
+          <div class="content-section">
+            <label class="section-label">Map controls</label>
+            <button id="refresh-data">REFRESH MAP DATA</button>
+          </div>
+        </div>
+        <div class="footer">
+          <img alt="unfolded-logo" src="https://cdn.unfolded.ai/statics/unfolded-logo-black.png" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const unfoldedMap = new UnfoldedMap({
+        mapUUID: '80c800cc-5805-4416-94a5-bd8105cab7f7',
+        embed: true,
+        onLoad: () => {
+          console.log(
+            '%cUnfoldedMap: ' + '%cMap has loaded...',
+            'color: violet;',
+            'color: yellow;'
+          );
+          const loader = document.getElementById('loader');
+          loader.style.display = 'none';
+          const contentContainer = document.getElementById('content');
+          contentContainer.style.display = 'initial';
+        }
+      });
+
+      const refresDatahBtn = document.getElementById('refresh-data');
+      refresDatahBtn.onclick = function (e) {
+        unfoldedMap.refreshMapData();
+      };
+    </script>
+  </body>
+</html>

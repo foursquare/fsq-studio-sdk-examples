@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "sass": "^1.35.1"
+  },
+  "scripts": {
+    "start": "yarn build && yarn http-server",
+    "build": "yarn sass style.scss style.css",
+    "scss-watch": "yarn sass --watch src/style.scss src/style.css"
+  }
+}

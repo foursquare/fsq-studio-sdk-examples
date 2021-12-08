@@ -1,0 +1,140 @@
+<body style="margin: 0">
+<div 
+  class="codepen" 
+  data-prefill='{
+    "title": "Unfolded Map SDK - setViewState example",
+    "description": "",
+    "html_classes": ["loading", "no-js"],
+    "head": "&lt;meta name=&#x27;viewport&#x27; content=&#x27;width=device-width, initial-scale=1&#x27;&gt;",
+    "stylesheets": [
+      "https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css",
+      "https://cdn.unfolded.ai/sdk/examples/style.css"
+    ],
+    "scripts": [
+      "https://unpkg.com/@unfolded/map-sdk@0.2.0/dist/unfolded-sdk.min.js"
+    ]
+  }'
+  data-height="800" 
+  data-theme-id="1"
+  data-default-tab="result" 
+  data-editable="true"
+>
+<pre data-lang="html">
+&lt;div class="unfolded"&gt;
+  &lt;div class="sidemenu"&gt;
+    &lt;div class="header"&gt;
+      &lt;img
+        class="logo-image"
+        alt="company-logo"
+        src="https://i.ibb.co/yp2S4r7/your-company-logo-here.png"
+      /&gt;
+    &lt;/div&gt;
+    &lt;div id="loader"&gt;&lt;/div&gt;
+    &lt;div id="content"&gt;
+      &lt;h2&gt;Demo Application&lt;/h2&gt;
+      &lt;label class="subtitle"&gt;Built by &lt;a href="https://docs.unfolded.ai/map-sdk" target="_blank"&gt;Unfolded Map SDK&lt;/a&gt;&lt;/label&gt;
+      &lt;p class="description"&gt;
+        Demonstrating the possiblities of customizing Unfolded Studio using the Map SDK.
+      &lt;/p&gt;
+      &lt;p class="description-small"&gt;
+        &lt;code&gt;setViewState()&lt;/code&gt; - Positions the map view on a certain location based on provided coordinates, and with a defined zoom level.
+      &lt;/p&gt;
+      &lt;div class="content-section"&gt;
+        &lt;label class="section-label"&gt;Viewport controls&lt;/label&gt;
+        &lt;div class="location-container"&gt;
+          &lt;button id="move_button_sf"&gt;San Francisco&lt;/button&gt;
+          &lt;button id="move_button_ny"&gt;New York&lt;/button&gt;
+          &lt;button id="move_button_la"&gt;Los Angeles&lt;/button&gt;
+          &lt;button id="move_button_locate"&gt;Locate me&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;details open&gt;
+          &lt;summary&gt;JSON response&lt;/summary&gt;
+          &lt;pre id="results"&gt;&lt;/pre&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="footer"&gt;
+      &lt;img alt="unfolded-logo" src="https://cdn.unfolded.ai/statics/unfolded-logo-black.png" /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre data-lang="scss">
+</pre>
+<pre data-lang="js">
+const unfoldedMap = new UnfoldedMap({
+  mapUUID: '80c800cc-5805-4416-94a5-bd8105cab7f7',
+  embed: true,
+  onLoad: () => {
+    console.log('%cUnfoldedMap: ' + '%cMap has loaded...', 'color: violet;', 'color: yellow;');
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';
+    const contentContainer = document.getElementById('content');
+    contentContainer.style.display = 'initial';
+  }
+});
+
+const moveButtonSF = document.getElementById('move_button_sf');
+moveButtonSF.onclick = function (e) {
+  unfoldedMap.setViewState(
+    {
+      longitude: -122.4194,
+      latitude: 37.7749,
+      zoom: 6
+    }
+  ).then(data => console.log(data));
+};
+
+const moveButtonNY = document.getElementById('move_button_ny');
+moveButtonNY.onclick = function (e) {
+  unfoldedMap.setViewState(
+    {
+      longitude: -73.935242,
+      latitude: 40.730610,
+      zoom: 6
+    }
+  ).then(data => console.log(data));
+};
+
+const moveButtonLA = document.getElementById('move_button_la');
+moveButtonLA.onclick = function (e) {
+  unfoldedMap.setViewState(
+    {
+      longitude: -118.243683,
+      latitude: 34.052235,
+      zoom: 6
+    }
+  ).then(data => console.log(data));
+};
+
+const locateMeBtn = document.getElementById("move_button_locate");
+locateMeBtn.onclick = function (e) {
+  const options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  };
+
+  function success(position) {
+    const crd = position.coords;
+    unfoldedMap.setViewState({
+      longitude: crd.longitude,
+      latitude: crd.latitude,
+      zoom: 18
+    });
+  }
+
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+    const results = document.getElementById("results");
+    results.innerHTML = JSON.stringify(
+      `ERROR(${err.code}): ${err.message}`
+    );
+  }
+
+  navigator.geolocation.getCurrentPosition(success, error, options);
+};
+</pre>
+</div>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
