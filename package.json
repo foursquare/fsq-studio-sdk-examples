@@ -5,7 +5,7 @@
   },
   "scripts": {
     "start": "yarn build && yarn http-server",
-    "build": "yarn sass style.scss style.css",
+    "build": "yarn sass src/style.scss src/style.css",
     "scss-watch": "yarn sass --watch src/style.scss src/style.css"
   }
 }

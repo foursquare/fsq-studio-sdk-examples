@@ -27,12 +27,23 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.content .header .logo svg {
-  width: 200px;
-  height: 200px;
-}
 .content .header h1 {
+  display: flex;
+  align-items: center;
   text-align: center;
+  margin-top: 0;
+}
+.content .header h1 .logo {
+  background-image: url("/src/static/logo.svg");
+  width: 40px;
+  height: 34px;
+  margin-right: 32px;
+}
+.content .header .summary {
+  font-size: 14px;
+}
+.content .header .preview-img {
+  width: 100%;
 }
 .content .header .navigation-tabs {
   width: 100%;
@@ -58,7 +69,13 @@ body {
   font-weight: bold;
   border-bottom: 1px #000 solid;
 }
-.content .subtitle {
+.content .tab-container {
+  display: none;
+}
+.content .tab-container.active {
+  display: block;
+}
+.content .tab-container .subtitle {
   text-align: center;
   color: #5558db;
   margin: 0 30% 64px 30%;
@@ -66,7 +83,7 @@ body {
   border-bottom: 4px #5558db solid;
   font-size: 28px;
 }
-.content .styled-table {
+.content .tab-container .styled-table {
   border-collapse: collapse;
   margin: 24px 0 64px 0;
   font-size: 0.9em;
@@ -75,40 +92,40 @@ body {
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.content .styled-table thead tr {
+.content .tab-container .styled-table thead tr {
   background-color: #1e4dff;
   color: #ffffff;
   text-align: left;
 }
-.content .styled-table th,
-.content .styled-table td {
+.content .tab-container .styled-table th,
+.content .tab-container .styled-table td {
   text-align: center;
   padding: 12px 16px;
 }
-.content .styled-table tbody td:hover {
+.content .tab-container .styled-table tbody td:hover {
   background-color: #dddcdc;
   cursor: pointer;
 }
-.content .styled-table tbody td:hover i {
+.content .tab-container .styled-table tbody td:hover i {
   color: #5558db;
 }
-.content .styled-table tbody td.desc {
+.content .tab-container .styled-table tbody td.desc {
   text-align: left;
 }
-.content .styled-table tbody td.desc pre {
+.content .tab-container .styled-table tbody td.desc pre {
   margin: 0;
   font-size: 16px;
 }
-.content .styled-table tbody td i {
+.content .tab-container .styled-table tbody td i {
   color: #000;
 }
-.content .styled-table tbody tr {
+.content .tab-container .styled-table tbody tr {
   border-bottom: 1px solid #dddddd;
 }
-.content .styled-table tbody tr:nth-of-type(even) {
+.content .tab-container .styled-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
-.content .styled-table tbody tr:last-of-type {
+.content .tab-container .styled-table tbody tr:last-of-type {
   border-bottom: 2px solid #1e4dff;
 }
 

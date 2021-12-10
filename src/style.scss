@@ -25,14 +25,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .logo {
-      svg {
-        width: 200px;
-        height: 200px;
+
+    h1 {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-top: 0;
+      .logo {
+        background-image: url('/src/static/logo.svg');
+        width: 40px;
+        height: 34px;
+        margin-right: 32px;
       }
     }
-    h1 {
-      text-align: center;
+    .summary {
+      font-size: 14px;
+    }
+    .preview-img {
+      width: 100%;
     }
     .navigation-tabs {
       width: 100%;
@@ -61,63 +71,70 @@ body {
     }
   }
 
-  .subtitle {
-    text-align: center;
-    color: #5558db;
-    margin: 0 30% 64px 30%;
-    padding-bottom: 16px;
-    border-bottom: 4px #5558db solid;
-    font-size: 28px;
-  }
+  .tab-container {
+    display: none;
 
-  .styled-table {
-    border-collapse: collapse;
-    margin: 24px 0 64px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    width: 100%;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-    thead tr {
-      background-color: #1e4dff;
-      color: #ffffff;
-      text-align: left;
+    &.active {
+      display: block;
     }
-    th,
-    td {
+    .subtitle {
       text-align: center;
-      padding: 12px 16px;
+      color: #5558db;
+      margin: 0 30% 64px 30%;
+      padding-bottom: 16px;
+      border-bottom: 4px #5558db solid;
+      font-size: 28px;
     }
-    tbody {
-      td {
-        &:hover {
-          background-color: #dddcdc;
-          cursor: pointer;
-          i {
-            color: #5558db;
-          }
-        }
-        &.desc {
-          text-align: left;
 
-          pre {
-            margin: 0;
-            font-size: 16px;
-          }
-        }
-        i {
-          color: #000;
-        }
+    .styled-table {
+      border-collapse: collapse;
+      margin: 24px 0 64px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      width: 100%;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+      thead tr {
+        background-color: #1e4dff;
+        color: #ffffff;
+        text-align: left;
       }
-      tr {
-        border-bottom: 1px solid #dddddd;
+      th,
+      td {
+        text-align: center;
+        padding: 12px 16px;
+      }
+      tbody {
+        td {
+          &:hover {
+            background-color: #dddcdc;
+            cursor: pointer;
+            i {
+              color: #5558db;
+            }
+          }
+          &.desc {
+            text-align: left;
 
-        &:nth-of-type(even) {
-          background-color: #f3f3f3;
+            pre {
+              margin: 0;
+              font-size: 16px;
+            }
+          }
+          i {
+            color: #000;
+          }
         }
-        &:last-of-type {
-          border-bottom: 2px solid #1e4dff;
+        tr {
+          border-bottom: 1px solid #dddddd;
+
+          &:nth-of-type(even) {
+            background-color: #f3f3f3;
+          }
+          &:last-of-type {
+            border-bottom: 2px solid #1e4dff;
+          }
         }
       }
     }

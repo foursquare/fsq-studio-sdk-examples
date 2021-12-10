@@ -5,137 +5,131 @@
     <title>Unfolded Examples</title>
     <link href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/d4bd3f72b7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="content">
+    <div id="vue-container" class="content">
       <div class="header">
-        <div class="logo">
-          <svg viewBox="0 0 202 175" class="data-ex-icons-unfolded" style="fill: currentcolor">
-            <path
-              d="M100.6 87.13 50.31 174.25 0 87.13 50.3 0 67.94 30.54 35.27 87.13 49.69 112.11 82.36 55.52 100.6 87.13Z"
-              fill="#1e4dff"
-            ></path>
-            <path d="M67.94 30.54 168.61 30.54 150.98 0 50.3 0 67.94 30.54" fill="#5cbbff"></path>
-            <path d="M201.22,87.13l0-.06L183,55.52H82.36L100.6,87.13Z" fill="#5cbbff"></path>
-            <path d="M164.67,87.12,146,119.66l55.21-32.54Z" fill="#090b66"></path>
-            <path
-              d="M201.21 87.15 150.91 174.25 132.7 142.71 146.07 119.64 201.21 87.15Z"
-              fill="#5558db"
-            ></path>
-          </svg>
+        <div class="logo"></div>
+        <h1 class="title">
+          <a href="https://www.unfolded.ai/" class="logo"></a>
+          Unfolded Studio - Map SDK Examples
+        </h1>
+        <img class="preview-img" src="/images/out.gif" alt="map-sdk-preview" />
+        <div class="summary">
+          <p>The Unfolded Map SDK lets you embed and control Unfolded maps from:</p>
+          <ul>
+            <li>Your own web pages, or Observable notebooks, using the JavaScript Map SDK.</li>
+            <li>Jupyter, Databricks, or Google Colab notebooks, using the Python Map SDK.</li>
+          </ul>
+
+          <p>The Map SDK makes it easy to:</p>
+          <ul>
+            <li>Do exploratory geospatial analytics and data science in Jupyter Notebooks.</li>
+            <li>Build web pages that embed published Unfolded Studio maps.</li>
+            <li>Create bespoke styling and interactions for Unfolded Studio maps.</li>
+            <li>Integrate Unfolded maps into your organization's workflows.</li>
+          </ul>
+          <p>
+            To learn more about Unfolded visit our
+            <a href="https://www.unfolded.ai/">official website</a> and for additional Map SDK
+            features check out the examples below and please visit our
+            <a href="https://docs.unfolded.ai/">official documentation</a> page.
+          </p>
         </div>
-        <h1 class="title">Unfolded Studio - Map SDK Examples</h1>
+
         <div class="navigation-tabs">
-          <button id="btn-1" class="active" onclick="showTab('tab-1')">JavaScript</button>
-          <button id="btn-2" onclick="showTab('tab-2')">Jupyter Notebooks</button>
+          <button v-bind:class="{ active: activeTab === 1 }" @click="showTab(1)">JavaScript</button>
+          <button v-bind:class="{ active: activeTab === 2 }" @click="showTab(2)">
+            Jupyter Notebooks
+          </button>
         </div>
       </div>
 
-      <section id="tab-container">Click on the tabs</section>
-      <section id="tab-1" style="visibility: hidden">
+      <section class="tab-container" v-bind:class="{ active: activeTab === 1 }">
         <h2 class="subtitle">API Functions</h2>
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Description</th>
-              <th>Docs</th>
-              <th>Open in GitHub</th>
-              <th>Open in VS Code</th>
-              <th>Run the example</th>
-            </tr>
-          </thead>
-          <tbody id="table-js-api"></tbody>
-        </table>
+        <toc-table v-bind:items="api"></toc-table>
 
         <h2 class="subtitle">JS Frameworks</h2>
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Description</th>
-              <th>Docs</th>
-              <th>Open in GitHub</th>
-              <th>Open in VS Code</th>
-              <th>Run the example</th>
-            </tr>
-          </thead>
-          <tbody id="table-js-frameworks"></tbody>
-        </table>
+        <toc-table v-bind:items="frameworks"></toc-table>
       </section>
-      <section id="tab-2" style="visibility: hidden"></section>
+      <section class="tab-container" v-bind:class="{ active: activeTab === 2 }">
+        <toc-table v-bind:items="jupyter"></toc-table>
+      </section>
     </div>
 
     <script>
-      fetch('src/toc.json', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json'
-        }
-      })
-        .then(response => response.json())
-        .then(json => {
-          updateTable(json.javascript.api, 'table-js-api');
-          updateTable(json.javascript.frameworks, 'table-js-frameworks');
-          showTab('tab-1');
-        });
-
-      function updateTable(tocData, id) {
-        const tBody = document.getElementById(id);
-        const tableData = tocData
-          .map(item => {
-            return `
-              <tr>
-                <td class="desc"><pre>${item.description}</pre></td>
-                <td>
-                  <a href='${item.docsUrl}'>
-                    <i class="fas fa-book"></i>
-                  </a>
-                </td>
-                <td>
-                  <a href='${item.githubUrl}'>
-                    <i class="fab fa-github"></i>
-                  </a>
-                </td>
-                <td>
-                  <a href='${item.vscodeUrl}'>
-                    <i class="fas fa-code"></i>
-                  </a>
-                </td>
-                <td>
-                  <a href='${item.exampleUrl}'>
-                    <i class="fas fa-laptop-code"></i>
-                  </a>
-                </td>
-              </tr>
-            `;
+      new Vue({
+        el: '#vue-container',
+        data: {
+          api: null,
+          frameworks: null,
+          jupyter: null,
+          activeTab: 1
+        },
+        created() {
+          fetch('src/toc.json', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json'
+            }
           })
-          .join('');
-
-        tBody.innerHTML = tableData;
-      }
-      function showTab(tab) {
-        switch (tab) {
-          case 'tab-1':
-            document.getElementById('tab-container').innerHTML =
-              document.getElementById('tab-1').innerHTML;
-            document.getElementById('btn-2').classList.remove('active');
-            document.getElementById('btn-1').classList.add('active');
-            break;
-          case 'tab-2':
-            document.getElementById('tab-container').innerHTML =
-              document.getElementById('tab-2').innerHTML;
-            document.getElementById('btn-1').classList.remove('active');
-            document.getElementById('btn-2').classList.add('active');
-            break;
-          default:
-            document.getElementById('tab-container').innerHTML =
-              document.getElementById('tab-1').innerHTML;
-            document.getElementById('btn-2').classList.remove('active');
-            document.getElementById('btn-1').classList.add('active');
-            break;
+            .then(response => response.json())
+            .then(json => {
+              this.api = json.javascript.api;
+              this.frameworks = json.javascript.frameworks;
+              this.jupyter = json.jupyter;
+            });
+        },
+        methods: {
+          showTab: function (tabNumber) {
+            this.activeTab = tabNumber;
+          }
         }
-      }
+      });
+
+      Vue.component('toc-table', {
+        props: ['items'],
+        template: `
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Docs</th>
+              <th>Open in GitHub</th>
+              <th>Open in VS Code</th>
+              <th>Run the example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in items">
+              <td class="desc"><pre>{{item.description}}</pre></td>
+              <td>
+                <a v-bind:href="item.docsUrl">
+                  <i class="fas fa-book"></i>
+                </a>
+              </td>
+              <td>
+                <a v-bind:href="item.githubUrl">
+                  <i class="fab fa-github"></i>
+                </a>
+              </td>
+              <td>
+                <a v-bind:href="item.vscodeUrl">
+                  <i class="fas fa-code"></i>
+                </a>
+              </td>
+              <td>
+                <a v-bind:href="item.exampleUrl">
+                  <i class="fas fa-laptop-code"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>`
+      });
     </script>
   </body>
 </html>

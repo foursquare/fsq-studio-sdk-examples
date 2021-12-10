@@ -1,4 +1,90 @@
 {
+  "jupyter": [
+    {
+      "description": "Introduction",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Local maps",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Cloud maps",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Layers",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Filters",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Timeline",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Crossfilter",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Event handling",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Tensorflow prediction",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Suitability Analysis",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Kuwala Pupularity Correlation",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    },
+    {
+      "description": "Pytorch Trip Duration",
+      "docsUrl": "",
+      "githubUrl": "",
+      "vscodeUrl": "",
+      "exampleUrl": ""
+    }
+  ],
   "javascript": {
     "api": [
       {
@@ -91,6 +177,13 @@
         "githubUrl": "",
         "vscodeUrl": "",
         "exampleUrl": "map-sdk/js/api/set-timeline-config"
+      },
+      {
+        "description": "setViewState",
+        "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-view-state",
+        "githubUrl": "",
+        "vscodeUrl": "",
+        "exampleUrl": "map-sdk/js/api/set-view-state"
       }
     ],
     "frameworks": [
@@ -113,7 +206,7 @@
         "docsUrl": "https://docs.unfolded.ai/map-sdk/examples/use-with-vue",
         "githubUrl": "",
         "vscodeUrl": "",
-        "exampleUrl": "map-sdk/vuejs"
+        "exampleUrl": "map-sdk/js/api/vue-basic"
       },
       {
         "description": "Svelte",
