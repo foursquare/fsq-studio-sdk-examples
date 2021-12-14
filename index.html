@@ -55,7 +55,7 @@
         <toc-table v-bind:items="frameworks"></toc-table>
       </section>
       <section class="tab-container" v-bind:class="{ active: activeTab === 2 }">
-        <toc-table v-bind:items="jupyter"></toc-table>
+        <toc-table v-bind:items="jupyter" v-bind:is-jupyter="true"></toc-table>
       </section>
     </div>
 
@@ -91,7 +91,7 @@
       });
 
       Vue.component('toc-table', {
-        props: ['items'],
+        props: ['items', 'isJupyter'],
         template: `
         <table class="styled-table">
           <thead>
@@ -107,22 +107,22 @@
             <tr v-for="item in items">
               <td class="desc"><pre>{{item.description}}</pre></td>
               <td>
-                <a v-bind:href="item.docsUrl">
+                <a v-bind:href="item.docsUrl" target="_blank">
                   <i class="fas fa-book"></i>
                 </a>
               </td>
               <td>
-                <a v-bind:href="item.githubUrl">
+                <a v-bind:href="'https://' + item.githubUrl" target="_blank">
                   <i class="fab fa-github"></i>
                 </a>
               </td>
               <td>
-                <a v-bind:href="item.vscodeUrl">
+                <a v-bind:href="'https://vscode.dev/' + item.githubUrl" target="_blank">
                   <i class="fas fa-code"></i>
                 </a>
               </td>
               <td>
-                <a v-bind:href="item.exampleUrl">
+                <a v-bind:href="item.exampleUrl" target="_blank">
                   <i class="fas fa-laptop-code"></i>
                 </a>
               </td>

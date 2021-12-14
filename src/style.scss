@@ -103,7 +103,6 @@ body {
       th,
       td {
         text-align: center;
-        padding: 12px 16px;
       }
       tbody {
         td {
@@ -116,14 +115,19 @@ body {
           }
           &.desc {
             text-align: left;
+            padding: 12px 16px;
 
             pre {
               margin: 0;
               font-size: 16px;
             }
           }
-          i {
-            color: #000;
+          a {
+            padding: 12px 16px;
+            display: block;
+            i {
+              color: #000;
+            }
           }
         }
         tr {

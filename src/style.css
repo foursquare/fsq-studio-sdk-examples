@@ -100,7 +100,6 @@ body {
 .content .tab-container .styled-table th,
 .content .tab-container .styled-table td {
   text-align: center;
-  padding: 12px 16px;
 }
 .content .tab-container .styled-table tbody td:hover {
   background-color: #dddcdc;
@@ -111,12 +110,17 @@ body {
 }
 .content .tab-container .styled-table tbody td.desc {
   text-align: left;
+  padding: 12px 16px;
 }
 .content .tab-container .styled-table tbody td.desc pre {
   margin: 0;
   font-size: 16px;
 }
-.content .tab-container .styled-table tbody td i {
+.content .tab-container .styled-table tbody td a {
+  padding: 12px 16px;
+  display: block;
+}
+.content .tab-container .styled-table tbody td a i {
   color: #000;
 }
 .content .tab-container .styled-table tbody tr {

@@ -4,10 +4,12 @@
     <meta charset="utf-8" />
     <title>Unfolded Map SDK - getLayers example</title>
     <link href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css" rel="stylesheet" />
-    <link href="https://cdn.unfolded.ai/sdk/examples/style.css" rel="stylesheet" />
+    <link href="/src/common/examples.css" rel="stylesheet" />
+    <script src="/src/common/generate-badges.js"></script>
     <script src="https://unpkg.com/@unfolded/map-sdk@0.3.1/dist/unfolded-sdk.min.js"></script>
   </head>
   <body>
+    <div id="badges"></div>
     <div class="unfolded">
       <div class="sidemenu">
         <div class="header">
@@ -71,6 +73,8 @@
           results.innerHTML = JSON.stringify(layers, null, 2);
         });
       };
+
+      generateBadges('badges', 'getLayers');
     </script>
   </body>
 </html>
