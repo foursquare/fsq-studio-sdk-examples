@@ -1,5 +1,5 @@
 function generateBadges(elementId, description) {
-  fetch('/src/toc.json', {
+  fetch('https://unfoldedinc.github.io/examples/src/toc.json', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
