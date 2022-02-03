@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Unfolded Map SDK - setSplitMode example</title>
+    <link href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css" rel="stylesheet" />
+    <link href="https://unfoldedinc.github.io/examples/src/common/examples.css" rel="stylesheet" />
+    <script src="https://unfoldedinc.github.io/examples/src/common/generate-badges.js"></script>
+    <script src="https://unpkg.com/@unfolded/map-sdk@0.3.1/dist/unfolded-sdk.min.js"></script>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+  </head>
+  <body>
+    <div id="badges"></div>
+    <div class="unfolded">
+      <div class="sidemenu">
+        <div class="header">
+          <img
+            class="logo-image"
+            alt="company-logo"
+            src="https://i.ibb.co/yp2S4r7/your-company-logo-here.png"
+          />
+        </div>
+        <div id="loader"></div>
+        <div id="content">
+          <h2>Demo Application</h2>
+          <label class="subtitle"
+            >Built by
+            <a href="https://docs.unfolded.ai/map-sdk" target="_blank">Unfolded Map SDK</a></label
+          >
+          <p class="description">
+            Demonstrating the possiblities of customizing Unfolded Studio using the Map SDK.
+          </p>
+          <p class="description-small">
+            <span
+              ><code>setSplitMode()</code> - Sets the map Split Mode between dual, swipe, or single
+              mode.</span
+            >
+          </p>
+          <div class="content-section">
+            <button id="set-dual-map">SET DUAL MAP</button>
+            <button id="set-swipe-map">SET SWIPE MAP</button>
+            <button id="set-single-map">SET SINGLE MAP</button>
+          </div>
+        </div>
+        <div class="footer">
+          <img alt="unfolded-logo" src="https://cdn.unfolded.ai/statics/unfolded-logo-black.png" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const dataset1Id = uuidv4();
+      const dataset1 = {
+        uuid: dataset1Id,
+        label: 'Cities 1',
+        data: JSON.stringify([
+          {city: 'Buenos Aires', country: 'Argentina', lat: -34.58, lon: -58.66},
+          {city: 'Brasilia', country: 'Brazil', lat: -15.78, lon: -47.91}
+        ])
+      };
+      const dataset2Id = uuidv4();
+      const dataset2 = {
+        uuid: dataset2Id,
+        label: 'Cities 2',
+        data: JSON.stringify([
+          {city: 'Santiago', country: 'Chile', lat: -33.45, lon: -70.66},
+          {city: 'Bogota', country: 'Colombia', lat: 4.6, lon: -74.08},
+          {city: 'Caracas', country: 'Venezuela', lat: 10.48, lon: -66.86}
+        ])
+      };
+
+      const unfoldedMap = new UnfoldedMap({
+        onLoad: () => {
+          console.log(
+            '%cUnfoldedMap: ' + '%cMap has loaded...',
+            'color: violet;',
+            'color: yellow;'
+          );
+          const loader = document.getElementById('loader');
+          loader.style.display = 'none';
+          const contentContainer = document.getElementById('content');
+          contentContainer.style.display = 'initial';
+          unfoldedMap.addDataset(dataset1);
+          unfoldedMap.addDataset(dataset2);
+        }
+      });
+
+      const setDualMap = document.getElementById('set-dual-map');
+      setDualMap.onclick = function (e) {
+        unfoldedMap.getLayers().then(layers => {
+          unfoldedMap.setSplitMode('dual', [[layers[0].id], [layers[0].id]]);
+        });
+      };
+
+      const setSwipeMap = document.getElementById('set-swipe-map');
+      setSwipeMap.onclick = function (e) {
+        unfoldedMap.getLayers().then(layers => {
+          unfoldedMap.setSplitMode('swipe', [[layers[0].id], [layers[1].id]]);
+        });
+      };
+
+      const setSingleMap = document.getElementById('set-single-map');
+      setSingleMap.onclick = function (e) {
+        unfoldedMap.setSplitMode('single');
+      };
+
+      generateBadges('badges', 'setSplitMode');
+    </script>
+  </body>
+</html>

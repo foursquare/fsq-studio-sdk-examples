@@ -118,10 +118,22 @@
         "exampleUrl": "map-sdk/js/api/refresh-map-data"
       },
       {
+        "description": "addLayer",
+        "docsUrl": "https://docs.unfolded.ai/map-sdk/api/add-layer",
+        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/add-layer/index.html#L82",
+        "exampleUrl": "map-sdk/js/api/add-layer"
+      },
+      {
         "description": "removeLayer",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/remove-layer",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/remove-layer/index.html#L79",
-        "exampleUrl": "map-sdk/js/api/remove-layer"
+        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/add-remove-layer/index.html#L98",
+        "exampleUrl": "map-sdk/js/api/add-remove-layer"
+      },
+      {
+        "description": "setSplitMode",
+        "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-split-mode",
+        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-split-mode/index.html#L91",
+        "exampleUrl": "map-sdk/js/api/set-split-mode"
       },
       {
         "description": "setLayerTimelineConfig",
@@ -158,6 +170,24 @@
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-view-state",
         "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-view-state/index.html#L75-L81",
         "exampleUrl": "map-sdk/js/api/set-view-state"
+      },
+      {
+        "description": "addDataset",
+        "docsUrl": "https://docs.unfolded.ai/map-sdk/api/add-dataset",
+        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/add-remove-dataset/index.html#L78",
+        "exampleUrl": "map-sdk/js/api/add-remove-dataset"
+      },
+      {
+        "description": "removeDataset",
+        "docsUrl": "https://docs.unfolded.ai/map-sdk/api/remove-dataset",
+        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/add-remove-dataset/index.html#L83",
+        "exampleUrl": "map-sdk/js/api/add-remove-dataset"
+      },
+      {
+        "description": "setFilter",
+        "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-filter",
+        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-filter/index.html#L78",
+        "exampleUrl": "map-sdk/js/api/set-filter"
       }
     ],
     "frameworks": [

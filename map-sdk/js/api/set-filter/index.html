@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Unfolded Map SDK - removeLayer example</title>
+    <title>Unfolded Map SDK - setFilter example</title>
     <link href="https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css" rel="stylesheet" />
     <link href="https://unfoldedinc.github.io/examples/src/common/examples.css" rel="stylesheet" />
     <script src="https://unfoldedinc.github.io/examples/src/common/generate-badges.js"></script>
     <script src="https://unpkg.com/@unfolded/map-sdk@0.3.1/dist/unfolded-sdk.min.js"></script>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
   </head>
   <body>
     <div id="badges"></div>
@@ -29,16 +30,11 @@
           <p class="description">
             Demonstrating the possiblities of customizing Unfolded Studio using the Map SDK.
           </p>
-          <p class="description-small"><code>removeLayer()</code> - Remove a layer from the map.</p>
+          <p class="description-small">
+            <span><code>setFilter()</code> - Set filter value.</span>
+          </p>
           <div class="content-section">
-            <label class="section-label">Layer controls</label>
-            <button id="get-layers">GET LAYERS</button>
-            <details open>
-              <summary>JSON response</summary>
-              <pre id="results"></pre>
-            </details>
-            <input id="remove-id" placeholder="Enter the id of the layer to be removed" />
-            <button id="remove-layer">REMOVE LAYER</button>
+            <button id="set-filter">SET FILTER</button>
           </div>
         </div>
         <div class="footer">
@@ -48,9 +44,21 @@
     </div>
 
     <script>
+      const datasetId = uuidv4();
+      const layerId = uuidv4();
+      const dataset = {
+        uuid: datasetId,
+        label: 'Cities',
+        data: JSON.stringify([
+          {city: 'Buenos Aires', country: 'Argentina', lat: -34.58, lon: -58.66},
+          {city: 'Brasilia', country: 'Brazil', lat: -15.78, lon: -47.91},
+          {city: 'Santiago', country: 'Chile', lat: -33.45, lon: -70.66},
+          {city: 'Bogota', country: 'Colombia', lat: 4.6, lon: -74.08},
+          {city: 'Caracas', country: 'Venezuela', lat: 10.48, lon: -66.86}
+        ])
+      };
+
       const unfoldedMap = new UnfoldedMap({
-        mapUUID: '80c800cc-5805-4416-94a5-bd8105cab7f7',
-        embed: true,
         onLoad: () => {
           console.log(
             '%cUnfoldedMap: ' + '%cMap has loaded...',
@@ -61,26 +69,20 @@
           loader.style.display = 'none';
           const contentContainer = document.getElementById('content');
           contentContainer.style.display = 'initial';
+          unfoldedMap.addDataset(dataset);
         }
       });
 
-      const getLayersBtn = document.getElementById('get-layers');
-      getLayersBtn.onclick = e => {
-        unfoldedMap.getLayers().then(layers => {
-          console.log(layers);
-          const results = document.getElementById('results');
-          results.innerHTML = JSON.stringify(layers, null, 2);
+      const setFilterBtn = document.getElementById('set-filter');
+      setFilterBtn.onclick = function (e) {
+        unfoldedMap.setFilter({
+          id: uuidv4(),
+          field: 'country',
+          value: ['Brazil', 'Chile']
         });
       };
 
-      const removeLayerBtn = document.getElementById('remove-layer');
-      removeLayerBtn.onclick = function (e) {
-        const layerId = document.getElementById('remove-id').value;
-        unfoldedMap.removeLayer(layerId);
-        document.getElementById('remove-id').value = '';
-      };
-
-      generateBadges('badges', 'removeLayer');
+      generateBadges('badges', 'setFilter');
     </script>
   </body>
 </html>
