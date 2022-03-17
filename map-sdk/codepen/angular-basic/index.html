@@ -1,0 +1,306 @@
+<body style="margin: 0">
+<div 
+  class="codepen" 
+  data-prefill='{
+    "title": "Unfolded Map SDK - Angular Basics Demo",
+    "description": "Shows how to use Unfolded Map SDK with Angular",
+    "html_classes": ["loading", "no-js"],
+    "head": "&lt;meta name=&#x27;viewport&#x27; content=&#x27;width=device-width, initial-scale=1&#x27;&gt;",
+    "stylesheets": [
+      "https://unpkg.com/normalize.css@8.0.1/normalize.css",
+      "https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css"
+    ],
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.2.1/rxjs.umd.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.7/core.js",
+      "https://unpkg.com/@angular/core@6.0.5/bundles/core.umd.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.8.26/zone.min.js",
+      "https://unpkg.com/@angular/common@6.0.5/bundles/common.umd.js",
+      "https://unpkg.com/@angular/compiler@6.0.5/bundles/compiler.umd.js",
+      "https://unpkg.com/@angular/platform-browser@6.0.5/bundles/platform-browser.umd.js",
+      "https://unpkg.com/@angular/platform-browser-dynamic@6.0.5/bundles/platform-browser-dynamic.umd.js",
+      "https://unpkg.com/@unfolded/map-sdk@0.2.0/dist/unfolded-sdk.min.js"
+    ]
+  }'
+  data-height="800" 
+  data-theme-id="1"
+  data-default-tab="result" 
+  data-editable="true"
+>
+<pre data-lang="html">
+&lt;my-app&gt;&lt;/my-app&gt;
+</pre>
+<pre data-lang="scss">
+  html, 
+  body {
+      height: 100%;
+      overflow: hidden;
+  }
+  body {
+    font-family: 'Graphik Web';
+    margin: 0px;
+  
+    iframe {
+      border: none;
+    }
+  }
+  .overlay-container {
+    position: absolute;
+    width: 20%;
+    left: 0;
+    top: 80px;
+    margin: 16px;
+    padding: 16px;
+    background: rgb(250, 250, 250);
+  
+    h3 {
+      text-transform: uppercase;
+    }
+    h4 {
+      font-weight: 400;
+      color: hsla(0,0%,0%,0.9);
+    }
+    #button-container {
+      display: grid;
+      grid-auto-rows: auto;
+      grid-gap: 8px;
+  
+      button {
+        font-family: 'Graphik Web Semibold';
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 2px;
+        padding: 8px 24px;
+        border: none;
+        -webkit-border-radius: 2px;
+        -webkit-background-clip: padding-box;
+        -moz-border-radius: 2px;
+        -moz-background-clip: padding;
+        border-radius: 2px;
+        background-clip: padding-box;
+        -webkit-transition: color 0.2s linear, background-color 0.2s linear;
+        transition: color 0.2s linear, background-color 0.2s linear;
+        background-color: #3498db;
+        &:hover {
+          background-color: #217dbb;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+      .checkbox-group {
+        
+        .switch-label {
+          line-height: 34px;
+          vertical-align: top;
+        }
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+          margin: 0px 12px 12px 0px;
+  
+          input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+  
+            &:checked + .slider {
+              background-color: #3498db;
+            }
+            &:focus + .slider {
+              box-shadow: 0 0 1px #3498db;
+            }
+            &:checked + .slider:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+          }
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+  
+            &:before {
+              position: absolute;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+      #sdk-layers{
+        display: block;
+  
+        .toggle-label {
+          border-top: 1px solid #000;
+          display: inline-block;
+          width: 100%;
+          margin: 12px 0 12px 0;
+          padding-top: 12px;
+        }
+      }
+      .message {
+        border-top: 1px solid hsla(0,0%,0%,0.6);
+        padding-top: 12px;
+      }
+      #results {
+        overflow-x: auto;
+      }
+    }
+    #loader {
+      margin: 0 auto;
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  }
+</pre>
+<pre data-lang="typescript" type="text/babel">
+  // app.js
+
+  const { Component } = ng.core;
+  
+  @Component({
+    selector: 'my-app',
+    template: `
+     &lt;div class="overlay-container"&gt;
+      &lt;h4&gt;Embedding an Unfolded Map using the Map SDK with Angular&lt;/h4&gt;
+      &lt;div *ngIf='!isLoaded' id="loader"&gt;&lt;/div&gt;
+      &lt;div *ngIf='isLoaded' id="button-container"&gt;
+        &lt;button class="btn btn-primary btn-lg btn-square" (click)="goTo('sf')"&gt;SAN FRANCISCO&lt;/button&gt;
+        &lt;button class="btn btn-primary btn-lg btn-square" (click)="goTo('la')"&gt;LOS ANGELES&lt;/button&gt;
+        &lt;button class="btn btn-primary btn-lg btn-square" (click)="goTo('ny')"&gt;NEW YORK&lt;/button&gt;
+        &lt;button class="btn btn-primary btn-lg btn-square" (click)="getLayers()"&gt;GET LAYERS&lt;/button&gt;
+        &lt;div id="sdk-layers" *ngIf='layers.length'&gt;
+          &lt;label class='toggle-label'&gt;Toggle layer visibility&lt;/label&gt;
+          &lt;div class="checkbox-group" *ngFor="let layer of layers"&gt;
+            &lt;label class="switch"&gt;
+              &lt;input type="checkbox" [checked]="layer.isVisible" (change)="setLayerVisibility(layer.id)" /&gt;
+              &lt;span class="slider round"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label class="switch-label"&gt;
+              &lt;div&gt;{{layer.label}}&lt;/div&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+     &lt;div&gt;
+    `
+  })
+  class AppComponent {  
+    unfoldedMap = null;
+    isLoaded = false;
+    layers = [];
+    
+    constructor() {
+      this.unfoldedMap = new UnfoldedMap({
+        mapUUID: '80c800cc-5805-4416-94a5-bd8105cab7f7',
+        embed: true,
+        width: window.innerWidth,
+        height: window.innerHeight,
+        onLoad: () => { 
+          console.log('%cUnfoldedMapSDK: %cMap has loaded...', 'color: violet;', 'color: yellow;');
+          this.isLoaded = true;
+        }
+      });
+    }
+    
+    getLayers() {
+      this.unfoldedMap.getLayers().then((layers) => {
+        console.log(layers);
+        this.layers = layers;
+      });  
+    }
+    
+    setLayerVisibility(id) {
+      const index = this.layers.findIndex(layer => layer.id === id),
+            layer = this.layers[index],
+            layerId = layer.id,
+            isVisible = !layer.isVisible;
+      
+            this.unfoldedMap.setLayerVisibility(layerId, isVisible).then(layer => this.layers[index] = layer);
+    }
+    
+    goTo(location) {
+      let viewStateConfig = {};
+      switch(location) {
+        case 'sf':
+          viewStateConfig = {
+            longitude: -122.4194,
+            latitude: 37.7749,
+            zoom: 6
+          };
+          break;
+        case 'la':
+          viewStateConfig = {
+            longitude: -118.243683,
+            latitude: 34.052235,
+            zoom: 6
+          };
+          break;
+        case 'ny':
+          viewStateConfig = {
+            longitude: -73.935242,
+            latitude: 40.730610,
+            zoom: 6
+          };
+          break;
+      }
+      this._setViewState(viewStateConfig);
+    }
+    
+    _setViewState(config) {
+      this.unfoldedMap.setViewState(
+        config
+      ).then(data => console.log(data));
+    }
+  }
+  
+  // main.js
+  const { BrowserModule } = ng.platformBrowser;
+  const { NgModule } = ng.core;
+  const { CommonModule } = ng.common;
+  
+  @NgModule({
+    imports: [
+      BrowserModule,
+      CommonModule,
+    ],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent],
+    providers: []
+  })
+  class AppModule {}
+  
+  const { platformBrowserDynamic } = ng.platformBrowserDynamic; 
+  
+  platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .catch(err => console.error(err));
+</pre>
+</div>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>

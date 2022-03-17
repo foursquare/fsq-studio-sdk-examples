@@ -1,0 +1,270 @@
+<body style="margin: 0">
+  <div 
+    class="codepen" 
+    data-prefill='{
+      "title": "Unfolded Map SDK - Angular Basics Demo",
+      "description": "Shows how to use Unfolded Map SDK with Angular",
+      "html_classes": ["loading", "no-js"],
+      "head": "&lt;meta name=&#x27;viewport&#x27; content=&#x27;width=device-width, initial-scale=1&#x27;&gt;",
+      "stylesheets": [
+        "https://unpkg.com/normalize.css@8.0.1/normalize.css",
+        "https://cdn.unfolded.ai/statics/fonts/unfolded-fonts.css"
+      ],
+      "scripts": [
+        "https://cdn.jsdelivr.net/npm/vue@2.6.12",
+        "https://unpkg.com/@unfolded/map-sdk@0.2.0/dist/unfolded-sdk.min.js"
+      ]
+    }'
+    data-height="800" 
+    data-theme-id="1"
+    data-default-tab="result" 
+    data-editable="true"
+  >
+  <pre data-lang="html">
+    &lt;div id="vue-container"&gt;
+      &lt;div class="overlay-container"&gt;
+        &lt;h4&gt;Embedding an Unfolded Map using the Map SDK with Vue.js&lt;/h4&gt;
+        &lt;div v-if='!isLoaded' id="loader"&gt;&lt;/div&gt;
+        &lt;div v-if='isLoaded' id="button-container"&gt;
+          &lt;button class="btn btn-primary btn-lg btn-square" @click="goTo('sf')"&gt;SAN FRANCISCO&lt;/button&gt;
+          &lt;button class="btn btn-primary btn-lg btn-square" @click="goTo('la')"&gt;LOS ANGELES&lt;/button&gt;
+          &lt;button class="btn btn-primary btn-lg btn-square" @click="goTo('ny')"&gt;NEW YORK&lt;/button&gt;
+          &lt;button class="btn btn-primary btn-lg btn-square" @click="getLayers()"&gt;GET LAYERS&lt;/button&gt;
+          &lt;div id="sdk-layers" v-if='layers.length'&gt;
+            &lt;label class='toggle-label'&gt;Toggle layer visibility&lt;/label&gt;
+            &lt;div class="checkbox-group" v-for="layer in layers"&gt;
+              &lt;label class="switch"&gt;
+                &lt;input type="checkbox" :id="layer.id" :checked="layer.isVisible" @change="setLayerVisibility(layer.id)" /&gt;
+                &lt;span class="slider round"&gt;&lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label class="switch-label"&gt;
+                &lt;div&gt;{{layer.label}}&lt;/div&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  </pre>
+  <pre data-lang="scss">
+    html, 
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+    body {
+      font-family: 'Graphik Web';
+      margin: 0px;
+    
+      iframe {
+        border: none;
+      }
+    }
+    .overlay-container {
+      position: absolute;
+      width: 20%;
+      left: 0;
+      top: 80px;
+      margin: 16px;
+      padding: 16px;
+      background: rgb(250, 250, 250);
+    
+      h3 {
+        text-transform: uppercase;
+      }
+      h4 {
+        font-weight: 400;
+        color: hsla(0,0%,0%,0.9);
+      }
+      #button-container {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-gap: 8px;
+    
+        button {
+          font-family: 'Graphik Web Semibold';
+          font-weight: bold;
+          font-size: 12px;
+          letter-spacing: 2px;
+          padding: 8px 24px;
+          border: none;
+          -webkit-border-radius: 2px;
+          -webkit-background-clip: padding-box;
+          -moz-border-radius: 2px;
+          -moz-background-clip: padding;
+          border-radius: 2px;
+          background-clip: padding-box;
+          -webkit-transition: color 0.2s linear, background-color 0.2s linear;
+          transition: color 0.2s linear, background-color 0.2s linear;
+          background-color: #3498db;
+          &:hover {
+            background-color: #217dbb;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+        .checkbox-group {
+          
+          .switch-label {
+            line-height: 34px;
+            vertical-align: top;
+          }
+          .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin: 0px 12px 12px 0px;
+    
+            input { 
+              opacity: 0;
+              width: 0;
+              height: 0;
+    
+              &:checked + .slider {
+                background-color: #3498db;
+              }
+              &:focus + .slider {
+                box-shadow: 0 0 1px #3498db;
+              }
+              &:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+              }
+            }
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              -webkit-transition: .4s;
+              transition: .4s;
+              border-radius: 34px;
+    
+              &:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+        #sdk-layers{
+          display: block;
+    
+          .toggle-label {
+            border-top: 1px solid #000;
+            display: inline-block;
+            width: 100%;
+            margin: 12px 0 12px 0;
+            padding-top: 12px;
+          }
+        }
+        .message {
+          border-top: 1px solid hsla(0,0%,0%,0.6);
+          padding-top: 12px;
+        }
+        #results {
+          overflow-x: auto;
+        }
+      }
+      #loader {
+        margin: 0 auto;
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    }
+  </pre>
+  <pre data-lang="js">
+    new Vue({
+      el: '#vue-container',
+      data: {
+        lights: true,
+        unfoldedMap: null,
+        isLoaded: false,
+        layers: []
+      },
+      created() {
+        this.unfoldedMap = new UnfoldedMap({
+          mapUUID: '80c800cc-5805-4416-94a5-bd8105cab7f7',
+          embed: true,
+          width: '100%',
+          height: '100%',
+          onLoad: () => { 
+            console.log('%cUnfoldedMapSDK: %cMap has loaded...', 'color: violet;', 'color: yellow;');
+            this.isLoaded = true;
+          }
+        });
+      },
+      methods: {
+        getLayers: function() {
+          this.unfoldedMap.getLayers().then((layers) => {
+            console.log(layers);
+            this.layers = layers;
+          });
+        },
+        setLayerVisibility: function(id) {
+          const index = this.layers.findIndex(layer => layer.id === id),
+                layer = this.layers[index],
+                layerId = layer.id,
+                isVisible = !layer.isVisible;
+          this.unfoldedMap.setLayerVisibility(layerId, isVisible).then(layer => this.layers[index] = layer);
+        },
+        goTo: function(location) {
+          let viewStateConfig = {};
+          switch(location) {
+            case 'sf':
+              viewStateConfig = {
+                longitude: -122.4194,
+                latitude: 37.7749,
+                zoom: 6
+              };
+              break;
+            case 'la':
+              viewStateConfig = {
+                longitude: -118.243683,
+                latitude: 34.052235,
+                zoom: 6
+              };
+              break;
+            case 'ny':
+              viewStateConfig = {
+                longitude: -73.935242,
+                latitude: 40.730610,
+                zoom: 6
+              };
+              break;
+          }
+          this._setViewState(viewStateConfig);
+        },
+        _setViewState: function(config) {
+          this.unfoldedMap.setViewState(
+            config
+          ).then(data => console.log(data));
+        }
+      }
+    });
+  </pre>
+  </div>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </body>
+  
