@@ -1,5 +1,5 @@
 function generateBadges(elementId, description) {
-  fetch('https://unfoldedinc.github.io/examples/src/toc.json', {
+  fetch('https://foursquare.github.io/unfolded-sdk-examples/src/toc.json', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
