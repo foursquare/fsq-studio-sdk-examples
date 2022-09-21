@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Unfolded Map SDK - createMap example</title>
+<link href="https://foursquare.github.io/unfolded-sdk-examples/src/common/examples.css" rel="stylesheet" />
+</head>
+<body>
+<div id="codepen"></div>
+<div id="map"></div>
+<script id="script" type="module">
+import {createMap} from 'https://unpkg.com/@unfolded/map-sdk@1.2.0';
+
+const map = await createMap({
+  container: document.querySelector('#map')
+});
+</script>
+<script>
+addToCodePen();
+
+function addToCodePen() {
+  let htmlString = document.getElementById('script').innerHTML;
+  htmlString = htmlString.replace(/"/g, '&​quot;').replace(/'/g, '&apos;');
+  const JSONstring = JSON.stringify({
+    title: 'Map SDK - Create Map',
+    html: '&lt;div id="map"&gt;&lt;/div&gt;',
+    css: 'html,body {height: 100%;}body {overflow: hidden;margin: 0px;}',
+    js: htmlString,
+    js_pre_processor: 'none',
+    js_modernizr: false
+  });
+
+  const form =
+    '<form action="https://codepen.io/pen/define" method="POST" target="_blank">' +
+    '<input type="hidden" name="data" value=\'' +
+    JSONstring +
+    "'>" +
+    '<input type="image" src="http://s.cdpn.io/3/cp-arrow-right.svg" style="z-index: 1; position: fixed; top: 20px; left: 50%; transform: translateY(-50%);" width="40" height="40" value="Create New Pen with Prefilled Data" class="codepen-mover-button">' +
+    '</form>';
+
+  document.getElementById('codepen').innerHTML += form;
+}
+</script>
+</body>
+</html>
