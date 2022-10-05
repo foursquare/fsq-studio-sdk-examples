@@ -4,9 +4,9 @@
 [![open_in_colab][colab_badge]][colab_notebook_link]
 
 [binder_badge]: https://mybinder.org/badge_logo.svg
-[binder_jupyterlab_url]: https://mybinder.org/v2/gh/UnfoldedInc/examples/master?urlpath=lab/tree/notebooks/
+[binder_jupyterlab_url]: https://mybinder.org/v2/gh/foursquare/unfolded-sdk-examples/master?urlpath=lab/tree/notebooks/
 [colab_badge]: https://colab.research.google.com/assets/colab-badge.svg
-[colab_notebook_link]: https://colab.research.google.com/github/UnfoldedInc/examples/blob/master
+[colab_notebook_link]: https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master
 
 This repository contains sample code for [Unfolded](https://unfolded.ai) APIs, including
 

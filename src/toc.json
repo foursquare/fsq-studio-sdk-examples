@@ -4,73 +4,73 @@
       "description": "Introduction",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/01%20-%20Introduction.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/01%20-%20Introduction.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/01%20-%20Introduction.ipynb"
     },
     {
       "description": "Local maps",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/02%20-%20Local%20maps.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/02%20-%20Local%20maps.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/02%20-%20Local%20maps.ipynb"
     },
     {
       "description": "Cloud maps",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/03%20-%20Cloud%20maps.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/03%20-%20Cloud%20maps.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/03%20-%20Cloud%20maps.ipynb"
     },
     {
       "description": "Layers",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/04%20-%20Layers.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/04%20-%20Layers.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/04%20-%20Layers.ipynb"
     },
     {
       "description": "Filters",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/05%20-%20Filters.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/05%20-%20Filters.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/05%20-%20Filters.ipynb"
     },
     {
       "description": "Timeline",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/06%20-%20Timeline.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/06%20-%20Timeline.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/06%20-%20Timeline.ipynb"
     },
     {
       "description": "Crossfilter",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/07%20-%20Crossfilter.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/07%20-%20Crossfilter.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/07%20-%20Crossfilter.ipynb"
     },
     {
       "description": "Event handling",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/08%20-%20Eventhandling.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/08%20-%20Eventhandling.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/08%20-%20Eventhandling.ipynb"
     },
     {
       "description": "Tensorflow prediction",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/09%20-%20Tensorflow_prediction.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/09%20-%20Tensorflow_prediction.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/09%20-%20Tensorflow_prediction.ipynb"
     },
     {
       "description": "Suitability Analysis",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/10%20-%20Suitability_Analysis.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/10%20-%20Suitability_Analysis.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/10%20-%20Suitability_Analysis.ipynb"
     },
     {
       "description": "Kuwala Pupularity Correlation",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/11%20-%20Kuwala%20Popularity%20Correlation.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/11%20-%20Kuwala%20Popularity%20Correlation.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/11%20-%20Kuwala%20Popularity%20Correlation.ipynb"
     },
     {
       "description": "Pytorch Trip Duration",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
       "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/12%20-%20Pytorch%20Trip%20Duration.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/12%20-%20Pytorch%20Trip%20Duration.ipynb"
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/12%20-%20Pytorch%20Trip%20Duration.ipynb"
     }
   ],
   "javascript": {
