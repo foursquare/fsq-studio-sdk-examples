@@ -3,74 +3,74 @@
     {
       "description": "Introduction",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/01%20-%20Introduction.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/01%20-%20Introduction.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/01%20-%20Introduction.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/01%20-%20Introduction.ipynb"
     },
     {
       "description": "Local maps",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/02%20-%20Local%20maps.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/02%20-%20Local%20maps.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/02%20-%20Local%20maps.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/02%20-%20Local%20maps.ipynb"
     },
     {
       "description": "Cloud maps",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/03%20-%20Cloud%20maps.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/03%20-%20Cloud%20maps.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/03%20-%20Cloud%20maps.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/03%20-%20Cloud%20maps.ipynb"
     },
     {
       "description": "Layers",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/04%20-%20Layers.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/04%20-%20Layers.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/04%20-%20Layers.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/04%20-%20Layers.ipynb"
     },
     {
       "description": "Filters",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/05%20-%20Filters.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/05%20-%20Filters.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/05%20-%20Filters.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/05%20-%20Filters.ipynb"
     },
     {
       "description": "Timeline",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/06%20-%20Timeline.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/06%20-%20Timeline.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/06%20-%20Timeline.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/06%20-%20Timeline.ipynb"
     },
     {
       "description": "Crossfilter",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/07%20-%20Crossfilter.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/07%20-%20Crossfilter.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/07%20-%20Crossfilter.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/07%20-%20Crossfilter.ipynb"
     },
     {
       "description": "Event handling",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/08%20-%20Eventhandling.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/08%20-%20Eventhandling.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/08%20-%20Eventhandling.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/08%20-%20Eventhandling.ipynb"
     },
     {
       "description": "Tensorflow prediction",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/09%20-%20Tensorflow_prediction.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/09%20-%20Tensorflow_prediction.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/09%20-%20Tensorflow_prediction.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/09%20-%20Tensorflow_prediction.ipynb"
     },
     {
       "description": "Suitability Analysis",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/10%20-%20Suitability_Analysis.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/10%20-%20Suitability_Analysis.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/10%20-%20Suitability_Analysis.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/10%20-%20Suitability_Analysis.ipynb"
     },
     {
       "description": "Kuwala Pupularity Correlation",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/11%20-%20Kuwala%20Popularity%20Correlation.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/11%20-%20Kuwala%20Popularity%20Correlation.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/11%20-%20Kuwala%20Popularity%20Correlation.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/11%20-%20Kuwala%20Popularity%20Correlation.ipynb"
     },
     {
       "description": "Pytorch Trip Duration",
       "docsUrl": "https://docs.unfolded.ai/jupyter/examples",
-      "githubUrl": "github.com/UnfoldedInc/examples/blob/master/notebooks/12%20-%20Pytorch%20Trip%20Duration.ipynb",
-      "exampleUrl": "https://colab.research.google.com/github/UnfoldedInc/examples/blob/master/notebooks/12%20-%20Pytorch%20Trip%20Duration.ipynb"
+      "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/notebooks/12%20-%20Pytorch%20Trip%20Duration.ipynb",
+      "exampleUrl": "https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master/notebooks/12%20-%20Pytorch%20Trip%20Duration.ipynb"
     }
   ],
   "javascript": {
@@ -78,85 +78,85 @@
       {
         "description": "new UnfoldedMap",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/unfolded-map",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/create-map/index.html#L14-L17",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/create-map/index.html#L14-L17",
         "exampleUrl": "map-sdk/js/api/create-map"
       },
       {
         "description": "getLayers",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/get-layers",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/get-layers/index.html#L70-L74",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/get-layers/index.html#L70-L74",
         "exampleUrl": "map-sdk/js/api/get-layers"
       },
       {
         "description": "getLayerTimelineInfo",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/get-layer-timeline-info",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/get-layer-timeline-info/index.html#L70-L73",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/get-layer-timeline-info/index.html#L70-L73",
         "exampleUrl": "map-sdk/js/api/get-layer-timeline-info"
       },
       {
         "description": "getTimelineInfo",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/get-timeline-info",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/get-timeline-info/index.html#L70-L73",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/get-timeline-info/index.html#L70-L73",
         "exampleUrl": "map-sdk/js/api/get-timeline-info"
       },
       {
         "description": "getMapConfig",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/get-map-config",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/get-set-map-config/index.html#L70-L74",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/get-set-map-config/index.html#L70-L74",
         "exampleUrl": "map-sdk/js/api/get-set-map-config"
       },
       {
         "description": "setMapConfig",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-map-config",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/get-set-map-config/index.html#L82",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/get-set-map-config/index.html#L82",
         "exampleUrl": "map-sdk/js/api/get-set-map-config"
       },
       {
         "description": "refreshMapData",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/refresh-map-data",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/refresh-map-data/index.html#L66",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/refresh-map-data/index.html#L66",
         "exampleUrl": "map-sdk/js/api/refresh-map-data"
       },
       {
         "description": "removeLayer",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/remove-layer",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/remove-layer/index.html#L79",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/remove-layer/index.html#L79",
         "exampleUrl": "map-sdk/js/api/remove-layer"
       },
       {
         "description": "setLayerTimelineConfig",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-layer-timeline-config",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-layer-timeline-config/index.html#L75-L77",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/set-layer-timeline-config/index.html#L75-L77",
         "exampleUrl": "map-sdk/js/api/set-layer-timeline-config"
       },
       {
         "description": "setLayerVisibility",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-layer-visibility",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-layer-visibility/index.html#L122-L129",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/set-layer-visibility/index.html#L122-L129",
         "exampleUrl": "map-sdk/js/api/set-layer-visibility"
       },
       {
         "description": "setMapControlVisibility",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-map-control-visibility",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-map-control-visibility/index.html#L68",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/set-map-control-visibility/index.html#L68",
         "exampleUrl": "map-sdk/js/api/set-map-control-visibility"
       },
       {
         "description": "setTheme",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-theme",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-theme/index.html#L69",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/set-theme/index.html#L69",
         "exampleUrl": "map-sdk/js/api/set-theme"
       },
       {
         "description": "setTimelineConfig",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-timeline-config",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-timeline-config/index.html#L100-L102",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/set-timeline-config/index.html#L100-L102",
         "exampleUrl": "map-sdk/js/api/set-timeline-config"
       },
       {
         "description": "setViewState",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/api/set-view-state",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/js/api/set-view-state/index.html#L75-L81",
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/js/api/set-view-state/index.html#L75-L81",
         "exampleUrl": "map-sdk/js/api/set-view-state"
       }
     ],
@@ -164,14 +164,14 @@
       {
         "description": "React",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/examples/use-with-react",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/react/react-basic-example/src/App.js",
-        "exampleUrl": "https://github.com/UnfoldedInc/examples/blob/master/map-sdk/react/react-basic-example/src/App.js"
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/react/react-basic-example/src/App.js",
+        "exampleUrl": "https://github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/react/react-basic-example/src/App.js"
       },
       {
         "description": "Angular",
         "docsUrl": "https://docs.unfolded.ai/map-sdk/examples/use-with-angular",
-        "githubUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/angular/angular-basic-example/src/app/app.component.ts",
-        "exampleUrl": "https://github.com/UnfoldedInc/examples/blob/master/map-sdk/angular/angular-basic-example/src/app/app.component.ts"
+        "githubUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/angular/angular-basic-example/src/app/app.component.ts",
+        "exampleUrl": "https://github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/angular/angular-basic-example/src/app/app.component.ts"
       },
       {
         "description": "Vue JS",
@@ -181,9 +181,9 @@
       },
       {
         "description": "Svelte",
-        "docsUrl": "github.com/UnfoldedInc/examples/blob/master/map-sdk/svelte/svelte-basic-example/src/App.svelte",
+        "docsUrl": "github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/svelte/svelte-basic-example/src/App.svelte",
         "githubUrl": "",
-        "exampleUrl": "https://github.com/UnfoldedInc/examples/blob/master/map-sdk/svelte/svelte-basic-example/src/App.svelte"
+        "exampleUrl": "https://github.com/foursquare/unfolded-sdk-examples/blob/master/map-sdk/svelte/svelte-basic-example/src/App.svelte"
       }
     ]
   }
