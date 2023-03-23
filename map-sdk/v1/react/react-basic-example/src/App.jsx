@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import {createMap} from '@unfolded/map-sdk';
 
 import './App.scss';
-const locationData = require('./data/cities.json');
+import locationData from './data/cities.json';
 
 function App() {
   const [map, setMap] = useState(null);
