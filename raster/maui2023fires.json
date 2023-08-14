@@ -10,7 +10,8 @@
     "https://stac-extensions.github.io/storage/v1.0.0/schema.json",
     "https://stac-extensions.github.io/accuracy/v1.0.0/schema.json",
     "https://stac-extensions.github.io/card4l/v0.1.0/optical/schema.json",
-    "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/classification/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.0.0/schema.json"
   ],
   "id": "LC09_L2SP_062047_20230808_20230810_02_T1_SR",
   "description": "Landsat Collection 2 Level-2 Surface Reflectance Product",
