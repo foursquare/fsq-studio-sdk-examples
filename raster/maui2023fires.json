@@ -110,6 +110,7 @@
       "type": "image/vnd.stac.geotiff; cloud-optimized=true",
       "roles": ["data"],
       "eo:bands": [{"name": "B1", "common_name": "coastal", "gsd": 30, "center_wavelength": 0.44}],
+      "raster:bands": [{"data_type": "uint16"}],
       "href": "https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2023/062/047/LC09_L2SP_062047_20230808_20230810_02_T1/LC09_L2SP_062047_20230808_20230810_02_T1_SR_B1.TIF",
       "alternate": {
         "s3": {
@@ -124,6 +125,7 @@
       "description": "Collection 2 Level-2 Blue Band (B2) Surface Reflectance",
       "type": "image/vnd.stac.geotiff; cloud-optimized=true",
       "roles": ["data"],
+      "raster:bands": [{"data_type": "uint16"}],
       "eo:bands": [{"name": "B2", "common_name": "blue", "gsd": 30, "center_wavelength": 0.48}],
       "href": "https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2023/062/047/LC09_L2SP_062047_20230808_20230810_02_T1/LC09_L2SP_062047_20230808_20230810_02_T1_SR_B2.TIF",
       "alternate": {
@@ -139,6 +141,7 @@
       "description": "Collection 2 Level-2 Green Band (B3) Surface Reflectance",
       "type": "image/vnd.stac.geotiff; cloud-optimized=true",
       "roles": ["data"],
+      "raster:bands": [{"data_type": "uint16"}],
       "eo:bands": [{"name": "B3", "common_name": "green", "gsd": 30, "center_wavelength": 0.56}],
       "href": "https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2023/062/047/LC09_L2SP_062047_20230808_20230810_02_T1/LC09_L2SP_062047_20230808_20230810_02_T1_SR_B3.TIF",
       "alternate": {
@@ -154,6 +157,7 @@
       "description": "Collection 2 Level-2 Red Band (B4) Surface Reflectance",
       "type": "image/vnd.stac.geotiff; cloud-optimized=true",
       "roles": ["data"],
+      "raster:bands": [{"data_type": "uint16"}],
       "eo:bands": [{"name": "B4", "common_name": "red", "gsd": 30, "center_wavelength": 0.65}],
       "href": "https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2023/062/047/LC09_L2SP_062047_20230808_20230810_02_T1/LC09_L2SP_062047_20230808_20230810_02_T1_SR_B4.TIF",
       "alternate": {
@@ -169,6 +173,7 @@
       "description": "Collection 2 Level-2 Near Infrared Band 0.8 (B5) Surface Reflectance",
       "type": "image/vnd.stac.geotiff; cloud-optimized=true",
       "roles": ["data", "reflectance"],
+      "raster:bands": [{"data_type": "uint16"}],
       "eo:bands": [{"name": "B5", "common_name": "nir08", "gsd": 30, "center_wavelength": 0.86}],
       "href": "https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2023/062/047/LC09_L2SP_062047_20230808_20230810_02_T1/LC09_L2SP_062047_20230808_20230810_02_T1_SR_B5.TIF",
       "alternate": {
@@ -184,6 +189,7 @@
       "description": "Collection 2 Level-2 Short-wave Infrared Band 1.6 (B6) Surface Reflectance",
       "type": "image/vnd.stac.geotiff; cloud-optimized=true",
       "roles": ["data", "reflectance"],
+      "raster:bands": [{"data_type": "uint16"}],
       "eo:bands": [{"name": "B6", "common_name": "swir16", "gsd": 30, "center_wavelength": 1.6}],
       "href": "https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2023/062/047/LC09_L2SP_062047_20230808_20230810_02_T1/LC09_L2SP_062047_20230808_20230810_02_T1_SR_B6.TIF",
       "alternate": {
@@ -199,6 +205,7 @@
       "description": "Collection 2 Level-2 Short-wave Infrared Band 2.2 (B7) Surface Reflectance",
       "type": "image/vnd.stac.geotiff; cloud-optimized=true",
       "roles": ["data", "reflectance"],
+      "raster:bands": [{"data_type": "uint16"}],
       "eo:bands": [{"name": "B7", "common_name": "swir22", "gsd": 30, "center_wavelength": 2.2}],
       "href": "https://landsatlook.usgs.gov/data/collection02/level-2/standard/oli-tirs/2023/062/047/LC09_L2SP_062047_20230808_20230810_02_T1/LC09_L2SP_062047_20230808_20230810_02_T1_SR_B7.TIF",
       "alternate": {
