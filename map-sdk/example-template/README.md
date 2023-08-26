@@ -1,6 +1,8 @@
-# Getting Started with Vite
+# Map SDK example template
 
-This project was bootstrapped with [Vite](https://vitejs.dev/guide/).
+This is an example template for Foursquare's [Map SDK](https://location.foursquare.com/developer/docs/studio-map-sdk-introduction) that allows you to programmatically render [Foursquare Studio](https://studio.foursquare.com/) maps within your website and with your own data.
+
+The project was bootstrapped with [Vite](https://vitejs.dev/guide/).
 
 ## Available Scripts
 
@@ -9,18 +11,20 @@ In the project directory, you can run:
 ### `yarn dev`
 
 Runs the app in the development mode.\
-By default, the app is available at [http://127.0.0.1:5173/](http://127.0.0.1:5173/) in your browser.
+By default, the app is available at [http://localhost:5173](http://localhost:5173/) in your browser.
 
 The page will reload when you make edits.\
 You will also see any lint errors in the console.
 
 ### `yarn build`
 
-Builds the app for production to the `dist` folder.
+Builds and bundles the app for production into the `dist` folder.
 
 ### `yarn preview`
 
-Runs a server to locally preview production build.
+Runs a server to locally preview the production build.
+
+If you don't use `yarn dev`, you likely would want to use `yarn build` and `yarn preview` together.
 
 ## Learn More
 

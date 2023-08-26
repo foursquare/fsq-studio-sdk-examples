@@ -613,6 +613,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/eslint@npm:^8.44.2":
+  version: 8.44.2
+  resolution: "@types/eslint@npm:8.44.2"
+  dependencies:
+    "@types/estree": "npm:*"
+    "@types/json-schema": "npm:*"
+  checksum: 2c707e4dbbb1e7a2f46f331303a736fbb9784ab1fb96e3b1d0238d896cafb2cf47cd268a762fc1d914b45bf6895e79f5a0ce2a5eb7635c400386c1f51ceca11d
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:*":
+  version: 1.0.1
+  resolution: "@types/estree@npm:1.0.1"
+  checksum: 76f967f120d15b8b8747312bff3a3016e480662d9a3dc0b1deb8bfb565898edc4c195bf924bc1398426c0a736844e7b4923cf176900fb4c7d5531907b01d2411
+  languageName: node
+  linkType: hard
+
 "@types/geojson@npm:^7946.0.10":
   version: 7946.0.10
   resolution: "@types/geojson@npm:7946.0.10"
@@ -620,7 +637,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:^7.0.12":
+"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.12":
   version: 7.0.12
   resolution: "@types/json-schema@npm:7.0.12"
   checksum: 3a4aae29f990800c28c9af99e3c67e35ea0441aee2c8707b4eb0c509ca4a9ea58edeb43885a3871c5ee57c64fa429e18e78a2449977cd601ca0b4721f58fc946
@@ -1491,6 +1508,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "example-template@workspace:."
   dependencies:
+    "@types/eslint": "npm:^8.44.2"
     "@types/react": "npm:^18.2.18"
     "@types/react-dom": "npm:^18.2.7"
     "@typescript-eslint/eslint-plugin": "npm:^6.2.1"
