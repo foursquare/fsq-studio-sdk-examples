@@ -3,7 +3,7 @@ import {createMap, MapApi} from '@unfolded/map-sdk';
 
 export const App: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [, setMap] = useState<MapApi | null>(null);
+  const [map, setMap] = useState<MapApi | null>(null);
 
   useEffect(() => {
     const initMap = async () => {
