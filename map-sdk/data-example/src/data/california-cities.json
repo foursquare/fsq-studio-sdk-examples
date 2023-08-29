@@ -1,0 +1,1486 @@
+[
+  {
+    "City": "Perris",
+    "State": "California",
+    "Population": 72326,
+    "lat": 33.7825194,
+    "lon": -117.22864779999999
+  },
+  {
+    "City": "Buena Park",
+    "State": "California",
+    "Population": 82882,
+    "lat": 33.867514299999996,
+    "lon": -117.99811809999999
+  },
+  {
+    "City": "Westminster",
+    "State": "California",
+    "Population": 91739,
+    "lat": 33.7513419,
+    "lon": -117.99399209999999
+  },
+  {
+    "City": "Rancho Palos Verdes",
+    "State": "California",
+    "Population": 42448,
+    "lat": 33.7444613,
+    "lon": -118.3870173
+  },
+  {
+    "City": "Sacramento",
+    "State": "California",
+    "Population": 479686,
+    "lat": 38.5815719,
+    "lon": -121.49439960000001
+  },
+  {
+    "City": "Covina",
+    "State": "California",
+    "Population": 48508,
+    "lat": 34.0900091,
+    "lon": -117.89033970000001
+  },
+  {
+    "City": "Visalia",
+    "State": "California",
+    "Population": 127763,
+    "lat": 36.330228399999996,
+    "lon": -119.2920585
+  },
+  {
+    "City": "Antioch",
+    "State": "California",
+    "Population": 107100,
+    "lat": 38.0049214,
+    "lon": -121.80578899999999
+  },
+  {
+    "City": "Murrieta",
+    "State": "California",
+    "Population": 107479,
+    "lat": 33.553914299999995,
+    "lon": -117.21392320000001
+  },
+  {
+    "City": "Chino",
+    "State": "California",
+    "Population": 80988,
+    "lat": 34.0122346,
+    "lon": -117.68894399999999
+  },
+  {
+    "City": "Fountain Valley",
+    "State": "California",
+    "Population": 56707,
+    "lat": 33.7091847,
+    "lon": -117.95366969999999
+  },
+  {
+    "City": "Tulare",
+    "State": "California",
+    "Population": 61170,
+    "lat": 36.20772879999999,
+    "lon": -119.3473379
+  },
+  {
+    "City": "Chula Vista",
+    "State": "California",
+    "Population": 256780,
+    "lat": 32.6400541,
+    "lon": -117.0841955
+  },
+  {
+    "City": "Concord",
+    "State": "California",
+    "Population": 125880,
+    "lat": 37.9779776,
+    "lon": -122.0310733
+  },
+  {
+    "City": "Campbell",
+    "State": "California",
+    "Population": 40584,
+    "lat": 37.2871651,
+    "lon": -121.9499568
+  },
+  {
+    "City": "Moreno Valley",
+    "State": "California",
+    "Population": 201175,
+    "lat": 33.9424658,
+    "lon": -117.2296717
+  },
+  {
+    "City": "Dublin",
+    "State": "California",
+    "Population": 52105,
+    "lat": 37.7021521,
+    "lon": -121.9357918
+  },
+  {
+    "City": "El Centro",
+    "State": "California",
+    "Population": 43363,
+    "lat": 32.792,
+    "lon": -115.56305139999999
+  },
+  {
+    "City": "Pittsburg",
+    "State": "California",
+    "Population": 66695,
+    "lat": 38.027976200000005,
+    "lon": -121.88468059999998
+  },
+  {
+    "City": "Brea",
+    "State": "California",
+    "Population": 40963,
+    "lat": 33.9166805,
+    "lon": -117.9000604
+  },
+  {
+    "City": "Indio",
+    "State": "California",
+    "Population": 83539,
+    "lat": 33.7205771,
+    "lon": -116.2155619
+  },
+  {
+    "City": "Glendora",
+    "State": "California",
+    "Population": 51074,
+    "lat": 34.136118700000004,
+    "lon": -117.86533899999999
+  },
+  {
+    "City": "Calexico",
+    "State": "California",
+    "Population": 39389,
+    "lat": 32.6789476,
+    "lon": -115.4988834
+  },
+  {
+    "City": "Clovis",
+    "State": "California",
+    "Population": 99769,
+    "lat": 36.8252277,
+    "lon": -119.70291940000001
+  },
+  {
+    "City": "Orange",
+    "State": "California",
+    "Population": 139969,
+    "lat": 33.787794399999996,
+    "lon": -117.8531119
+  },
+  {
+    "City": "Walnut Creek",
+    "State": "California",
+    "Population": 66900,
+    "lat": 37.9100783,
+    "lon": -122.06518190000001
+  },
+  {
+    "City": "Porterville",
+    "State": "California",
+    "Population": 55174,
+    "lat": 36.06523,
+    "lon": -119.0167679
+  },
+  {
+    "City": "Merced",
+    "State": "California",
+    "Population": 81102,
+    "lat": 37.3021632,
+    "lon": -120.48296770000002
+  },
+  {
+    "City": "Yorba Linda",
+    "State": "California",
+    "Population": 67032,
+    "lat": 33.888625899999994,
+    "lon": -117.8131125
+  },
+  {
+    "City": "San Buenaventura (Ventura)",
+    "State": "California",
+    "Population": 108817,
+    "lat": 34.274646000000004,
+    "lon": -119.22903159999998
+  },
+  {
+    "City": "Fremont",
+    "State": "California",
+    "Population": 224922,
+    "lat": 37.548269700000006,
+    "lon": -121.98857190000001
+  },
+  {
+    "City": "Pomona",
+    "State": "California",
+    "Population": 151348,
+    "lat": 34.055103,
+    "lon": -117.7499909
+  },
+  {
+    "City": "Eastvale",
+    "State": "California",
+    "Population": 55191,
+    "lat": 33.952463,
+    "lon": -117.5848025
+  },
+  {
+    "City": "Tustin",
+    "State": "California",
+    "Population": 78327,
+    "lat": 33.7458511,
+    "lon": -117.82616599999999
+  },
+  {
+    "City": "Escondido",
+    "State": "California",
+    "Population": 148738,
+    "lat": 33.1192068,
+    "lon": -117.086421
+  },
+  {
+    "City": "San Bruno",
+    "State": "California",
+    "Population": 42443,
+    "lat": 37.6304904,
+    "lon": -122.41108349999999
+  },
+  {
+    "City": "Berkeley",
+    "State": "California",
+    "Population": 116768,
+    "lat": 37.87159260000001,
+    "lon": -122.272747
+  },
+  {
+    "City": "San Clemente",
+    "State": "California",
+    "Population": 65040,
+    "lat": 33.4269728,
+    "lon": -117.6119925
+  },
+  {
+    "City": "La Habra",
+    "State": "California",
+    "Population": 61653,
+    "lat": 33.9319578,
+    "lon": -117.94617340000002
+  },
+  {
+    "City": "Daly City",
+    "State": "California",
+    "Population": 104739,
+    "lat": 37.687924100000004,
+    "lon": -122.47020790000002
+  },
+  {
+    "City": "El Monte",
+    "State": "California",
+    "Population": 115708,
+    "lat": 34.0686206,
+    "lon": -118.02756670000001
+  },
+  {
+    "City": "Danville",
+    "State": "California",
+    "Population": 43341,
+    "lat": 37.8215929,
+    "lon": -121.9999606
+  },
+  {
+    "City": "Santa Barbara",
+    "State": "California",
+    "Population": 90412,
+    "lat": 34.4208305,
+    "lon": -119.69819009999999
+  },
+  {
+    "City": "San Mateo",
+    "State": "California",
+    "Population": 101128,
+    "lat": 37.562991700000005,
+    "lon": -122.32552539999999
+  },
+  {
+    "City": "Lompoc",
+    "State": "California",
+    "Population": 43509,
+    "lat": 34.6391501,
+    "lon": -120.4579409
+  },
+  {
+    "City": "Salinas",
+    "State": "California",
+    "Population": 155662,
+    "lat": 36.6777372,
+    "lon": -121.6555013
+  },
+  {
+    "City": "Ceres",
+    "State": "California",
+    "Population": 46714,
+    "lat": 37.5949316,
+    "lon": -120.9577098
+  },
+  {
+    "City": "Bell Gardens",
+    "State": "California",
+    "Population": 42889,
+    "lat": 33.965291799999996,
+    "lon": -118.1514588
+  },
+  {
+    "City": "San Leandro",
+    "State": "California",
+    "Population": 87965,
+    "lat": 37.7249296,
+    "lon": -122.1560768
+  },
+  {
+    "City": "Vista",
+    "State": "California",
+    "Population": 96929,
+    "lat": 33.2000368,
+    "lon": -117.2425355
+  },
+  {
+    "City": "Lodi",
+    "State": "California",
+    "Population": 63338,
+    "lat": 38.1341477,
+    "lon": -121.27221940000001
+  },
+  {
+    "City": "National City",
+    "State": "California",
+    "Population": 59834,
+    "lat": 32.6781085,
+    "lon": -117.0991967
+  },
+  {
+    "City": "Hayward",
+    "State": "California",
+    "Population": 151574,
+    "lat": 37.6688205,
+    "lon": -122.08079640000001
+  },
+  {
+    "City": "Hanford",
+    "State": "California",
+    "Population": 54686,
+    "lat": 36.3274502,
+    "lon": -119.64568440000001
+  },
+  {
+    "City": "Cypress",
+    "State": "California",
+    "Population": 49087,
+    "lat": 33.8169599,
+    "lon": -118.0372852
+  },
+  {
+    "City": "Redlands",
+    "State": "California",
+    "Population": 69999,
+    "lat": 34.055569299999995,
+    "lon": -117.1825381
+  },
+  {
+    "City": "Rialto",
+    "State": "California",
+    "Population": 101910,
+    "lat": 34.1064001,
+    "lon": -117.37032350000001
+  },
+  {
+    "City": "Rancho Santa Margarita",
+    "State": "California",
+    "Population": 49228,
+    "lat": 33.640855,
+    "lon": -117.603104
+  },
+  {
+    "City": "Palm Springs",
+    "State": "California",
+    "Population": 46281,
+    "lat": 33.8302961,
+    "lon": -116.54529209999998
+  },
+  {
+    "City": "San Diego",
+    "State": "California",
+    "Population": 1355896,
+    "lat": 32.715738,
+    "lon": -117.1610838
+  },
+  {
+    "City": "Santa Rosa",
+    "State": "California",
+    "Population": 171990,
+    "lat": 38.440428999999995,
+    "lon": -122.7140548
+  },
+  {
+    "City": "Cathedral City",
+    "State": "California",
+    "Population": 52977,
+    "lat": 33.780538799999995,
+    "lon": -116.46680359999999
+  },
+  {
+    "City": "Sunnyvale",
+    "State": "California",
+    "Population": 147559,
+    "lat": 37.368829999999996,
+    "lon": -122.03634960000001
+  },
+  {
+    "City": "Santa Cruz",
+    "State": "California",
+    "Population": 62864,
+    "lat": 36.9741171,
+    "lon": -122.0307963
+  },
+  {
+    "City": "Tracy",
+    "State": "California",
+    "Population": 84691,
+    "lat": 37.7396513,
+    "lon": -121.42522269999999
+  },
+  {
+    "City": "Palm Desert",
+    "State": "California",
+    "Population": 50508,
+    "lat": 33.7222445,
+    "lon": -116.37445559999999
+  },
+  {
+    "City": "Camarillo",
+    "State": "California",
+    "Population": 66086,
+    "lat": 34.216393700000005,
+    "lon": -119.0376023
+  },
+  {
+    "City": "Oakland",
+    "State": "California",
+    "Population": 406253,
+    "lat": 37.8043637,
+    "lon": -122.27111370000002
+  },
+  {
+    "City": "Mountain View",
+    "State": "California",
+    "Population": 77846,
+    "lat": 37.3860517,
+    "lon": -122.08385109999999
+  },
+  {
+    "City": "Lake Elsinore",
+    "State": "California",
+    "Population": 57525,
+    "lat": 33.668077200000006,
+    "lon": -117.3272615
+  },
+  {
+    "City": "Monterey Park",
+    "State": "California",
+    "Population": 61085,
+    "lat": 34.0625106,
+    "lon": -118.1228476
+  },
+  {
+    "City": "Madera",
+    "State": "California",
+    "Population": 63105,
+    "lat": 36.961335600000005,
+    "lon": -120.0607176
+  },
+  {
+    "City": "Vallejo",
+    "State": "California",
+    "Population": 118837,
+    "lat": 38.1040864,
+    "lon": -122.25663670000002
+  },
+  {
+    "City": "Arcadia",
+    "State": "California",
+    "Population": 57639,
+    "lat": 34.139729200000005,
+    "lon": -118.0353449
+  },
+  {
+    "City": "Alhambra",
+    "State": "California",
+    "Population": 84577,
+    "lat": 34.095287,
+    "lon": -118.1270146
+  },
+  {
+    "City": "Citrus Heights",
+    "State": "California",
+    "Population": 85285,
+    "lat": 38.7071247,
+    "lon": -121.2810611
+  },
+  {
+    "City": "Hawthorne",
+    "State": "California",
+    "Population": 86199,
+    "lat": 33.9164032,
+    "lon": -118.35257479999999
+  },
+  {
+    "City": "Stockton",
+    "State": "California",
+    "Population": 298118,
+    "lat": 37.9577016,
+    "lon": -121.29077959999998
+  },
+  {
+    "City": "Laguna Niguel",
+    "State": "California",
+    "Population": 64652,
+    "lat": 33.5225261,
+    "lon": -117.70755259999999
+  },
+  {
+    "City": "Costa Mesa",
+    "State": "California",
+    "Population": 112174,
+    "lat": 33.6411316,
+    "lon": -117.9186689
+  },
+  {
+    "City": "Encinitas",
+    "State": "California",
+    "Population": 61588,
+    "lat": 33.0369867,
+    "lon": -117.2919818
+  },
+  {
+    "City": "Huntington Park",
+    "State": "California",
+    "Population": 58879,
+    "lat": 33.981681200000004,
+    "lon": -118.22507250000001
+  },
+  {
+    "City": "Richmond",
+    "State": "California",
+    "Population": 107571,
+    "lat": 37.9357576,
+    "lon": -122.3477486
+  },
+  {
+    "City": "Newark",
+    "State": "California",
+    "Population": 44096,
+    "lat": 37.5296593,
+    "lon": -122.0402399
+  },
+  {
+    "City": "Diamond Bar",
+    "State": "California",
+    "Population": 56449,
+    "lat": 34.028622600000006,
+    "lon": -117.81033670000001
+  },
+  {
+    "City": "Baldwin Park",
+    "State": "California",
+    "Population": 76635,
+    "lat": 34.0852868,
+    "lon": -117.96089779999998
+  },
+  {
+    "City": "San Luis Obispo",
+    "State": "California",
+    "Population": 46377,
+    "lat": 35.2827524,
+    "lon": -120.6596156
+  },
+  {
+    "City": "Newport Beach",
+    "State": "California",
+    "Population": 87273,
+    "lat": 33.6189101,
+    "lon": -117.9289469
+  },
+  {
+    "City": "Long Beach",
+    "State": "California",
+    "Population": 469428,
+    "lat": 33.770050399999995,
+    "lon": -118.1937395
+  },
+  {
+    "City": "Chico",
+    "State": "California",
+    "Population": 88077,
+    "lat": 39.728494399999995,
+    "lon": -121.8374777
+  },
+  {
+    "City": "Colton",
+    "State": "California",
+    "Population": 53243,
+    "lat": 34.0739016,
+    "lon": -117.3136547
+  },
+  {
+    "City": "Montebello",
+    "State": "California",
+    "Population": 63495,
+    "lat": 34.0165053,
+    "lon": -118.11375349999999
+  },
+  {
+    "City": "Pleasanton",
+    "State": "California",
+    "Population": 74110,
+    "lat": 37.6624312,
+    "lon": -121.8746789
+  },
+  {
+    "City": "Fairfield",
+    "State": "California",
+    "Population": 109320,
+    "lat": 38.2493581,
+    "lon": -122.03996629999999
+  },
+  {
+    "City": "Milpitas",
+    "State": "California",
+    "Population": 69783,
+    "lat": 37.4323341,
+    "lon": -121.8995741
+  },
+  {
+    "City": "Placentia",
+    "State": "California",
+    "Population": 52206,
+    "lat": 33.87223710000001,
+    "lon": -117.87033629999999
+  },
+  {
+    "City": "Montclair",
+    "State": "California",
+    "Population": 38027,
+    "lat": 34.0775104,
+    "lon": -117.68977759999999
+  },
+  {
+    "City": "San Francisco",
+    "State": "California",
+    "Population": 837442,
+    "lat": 37.7749295,
+    "lon": -122.4194155
+  },
+  {
+    "City": "Fontana",
+    "State": "California",
+    "Population": 203003,
+    "lat": 34.0922335,
+    "lon": -117.435048
+  },
+  {
+    "City": "Chino Hills",
+    "State": "California",
+    "Population": 76572,
+    "lat": 33.989818799999995,
+    "lon": -117.7325848
+  },
+  {
+    "City": "Poway",
+    "State": "California",
+    "Population": 49417,
+    "lat": 32.9628232,
+    "lon": -117.0358646
+  },
+  {
+    "City": "San Jacinto",
+    "State": "California",
+    "Population": 45851,
+    "lat": 33.783908399999994,
+    "lon": -116.95863500000002
+  },
+  {
+    "City": "San Bernardino",
+    "State": "California",
+    "Population": 213708,
+    "lat": 34.1083449,
+    "lon": -117.2897652
+  },
+  {
+    "City": "Victorville",
+    "State": "California",
+    "Population": 121096,
+    "lat": 34.5362184,
+    "lon": -117.29276409999999
+  },
+  {
+    "City": "Morgan Hill",
+    "State": "California",
+    "Population": 40836,
+    "lat": 37.130501200000005,
+    "lon": -121.65439009999999
+  },
+  {
+    "City": "Culver City",
+    "State": "California",
+    "Population": 39428,
+    "lat": 34.021122399999996,
+    "lon": -118.3964665
+  },
+  {
+    "City": "Elk Grove",
+    "State": "California",
+    "Population": 161007,
+    "lat": 38.4087993,
+    "lon": -121.37161780000001
+  },
+  {
+    "City": "Inglewood",
+    "State": "California",
+    "Population": 111542,
+    "lat": 33.9616801,
+    "lon": -118.3531311
+  },
+  {
+    "City": "Pasadena",
+    "State": "California",
+    "Population": 139731,
+    "lat": 34.1477849,
+    "lon": -118.1445155
+  },
+  {
+    "City": "Petaluma",
+    "State": "California",
+    "Population": 59440,
+    "lat": 38.232417,
+    "lon": -122.6366524
+  },
+  {
+    "City": "Napa",
+    "State": "California",
+    "Population": 79068,
+    "lat": 38.2975381,
+    "lon": -122.28686499999999
+  },
+  {
+    "City": "Apple Valley",
+    "State": "California",
+    "Population": 70924,
+    "lat": 34.5008311,
+    "lon": -117.18587590000001
+  },
+  {
+    "City": "Upland",
+    "State": "California",
+    "Population": 75413,
+    "lat": 34.09751,
+    "lon": -117.64838759999999
+  },
+  {
+    "City": "Modesto",
+    "State": "California",
+    "Population": 204933,
+    "lat": 37.6390972,
+    "lon": -120.99687820000001
+  },
+  {
+    "City": "Jurupa Valley",
+    "State": "California",
+    "Population": 98030,
+    "lat": 33.9971974,
+    "lon": -117.48548020000001
+  },
+  {
+    "City": "Bellflower",
+    "State": "California",
+    "Population": 77593,
+    "lat": 33.881681799999996,
+    "lon": -118.1170117
+  },
+  {
+    "City": "Coachella",
+    "State": "California",
+    "Population": 43092,
+    "lat": 33.6803003,
+    "lon": -116.17389399999999
+  },
+  {
+    "City": "Riverside",
+    "State": "California",
+    "Population": 316619,
+    "lat": 33.9533487,
+    "lon": -117.3961564
+  },
+  {
+    "City": "Palmdale",
+    "State": "California",
+    "Population": 157161,
+    "lat": 34.5794343,
+    "lon": -118.11646129999998
+  },
+  {
+    "City": "Novato",
+    "State": "California",
+    "Population": 54194,
+    "lat": 38.107419799999995,
+    "lon": -122.5697032
+  },
+  {
+    "City": "Mission Viejo",
+    "State": "California",
+    "Population": 96346,
+    "lat": 33.6000232,
+    "lon": -117.67199529999999
+  },
+  {
+    "City": "Lincoln",
+    "State": "California",
+    "Population": 45237,
+    "lat": 38.891565,
+    "lon": -121.29300790000002
+  },
+  {
+    "City": "Folsom",
+    "State": "California",
+    "Population": 73098,
+    "lat": 38.6779591,
+    "lon": -121.17605829999998
+  },
+  {
+    "City": "Livermore",
+    "State": "California",
+    "Population": 85156,
+    "lat": 37.6818745,
+    "lon": -121.7680088
+  },
+  {
+    "City": "Rohnert Park",
+    "State": "California",
+    "Population": 41398,
+    "lat": 38.3396367,
+    "lon": -122.70109840000002
+  },
+  {
+    "City": "Alameda",
+    "State": "California",
+    "Population": 76419,
+    "lat": 37.7652065,
+    "lon": -122.2416355
+  },
+  {
+    "City": "Manteca",
+    "State": "California",
+    "Population": 71948,
+    "lat": 37.797427299999995,
+    "lon": -121.21605259999998
+  },
+  {
+    "City": "Yuba City",
+    "State": "California",
+    "Population": 65416,
+    "lat": 39.1404477,
+    "lon": -121.6169108
+  },
+  {
+    "City": "Vacaville",
+    "State": "California",
+    "Population": 94275,
+    "lat": 38.3565773,
+    "lon": -121.98774440000001
+  },
+  {
+    "City": "Santa Monica",
+    "State": "California",
+    "Population": 92472,
+    "lat": 34.01945429999999,
+    "lon": -118.4911912
+  },
+  {
+    "City": "La Quinta",
+    "State": "California",
+    "Population": 39331,
+    "lat": 33.663357299999994,
+    "lon": -116.31000949999999
+  },
+  {
+    "City": "Delano",
+    "State": "California",
+    "Population": 52403,
+    "lat": 35.7688425,
+    "lon": -119.24705359999999
+  },
+  {
+    "City": "Corona",
+    "State": "California",
+    "Population": 159503,
+    "lat": 33.8752935,
+    "lon": -117.56643840000001
+  },
+  {
+    "City": "Rocklin",
+    "State": "California",
+    "Population": 59738,
+    "lat": 38.7907339,
+    "lon": -121.2357828
+  },
+  {
+    "City": "Santa Clarita",
+    "State": "California",
+    "Population": 179590,
+    "lat": 34.3916641,
+    "lon": -118.54258600000001
+  },
+  {
+    "City": "Hesperia",
+    "State": "California",
+    "Population": 92147,
+    "lat": 34.4263886,
+    "lon": -117.3008784
+  },
+  {
+    "City": "Redondo Beach",
+    "State": "California",
+    "Population": 67815,
+    "lat": 33.8491816,
+    "lon": -118.3884078
+  },
+  {
+    "City": "Temecula",
+    "State": "California",
+    "Population": 106780,
+    "lat": 33.4936391,
+    "lon": -117.14836480000001
+  },
+  {
+    "City": "Santee",
+    "State": "California",
+    "Population": 56105,
+    "lat": 32.8383828,
+    "lon": -116.97391670000002
+  },
+  {
+    "City": "Oxnard",
+    "State": "California",
+    "Population": 203007,
+    "lat": 34.1975048,
+    "lon": -119.17705159999998
+  },
+  {
+    "City": "Paramount",
+    "State": "California",
+    "Population": 54980,
+    "lat": 33.8894598,
+    "lon": -118.15979109999998
+  },
+  {
+    "City": "Anaheim",
+    "State": "California",
+    "Population": 345012,
+    "lat": 33.8352932,
+    "lon": -117.91450359999999
+  },
+  {
+    "City": "Monrovia",
+    "State": "California",
+    "Population": 37101,
+    "lat": 34.14426160000001,
+    "lon": -118.0019482
+  },
+  {
+    "City": "Santa Ana",
+    "State": "California",
+    "Population": 334227,
+    "lat": 33.7455731,
+    "lon": -117.8678338
+  },
+  {
+    "City": "Roseville",
+    "State": "California",
+    "Population": 127035,
+    "lat": 38.752123499999996,
+    "lon": -121.28800590000002
+  },
+  {
+    "City": "Woodland",
+    "State": "California",
+    "Population": 56590,
+    "lat": 38.6785157,
+    "lon": -121.7732971
+  },
+  {
+    "City": "Hemet",
+    "State": "California",
+    "Population": 81750,
+    "lat": 33.7475203,
+    "lon": -116.97196840000001
+  },
+  {
+    "City": "San Marcos",
+    "State": "California",
+    "Population": 89387,
+    "lat": 33.1433723,
+    "lon": -117.1661449
+  },
+  {
+    "City": "Lakewood",
+    "State": "California",
+    "Population": 81121,
+    "lat": 33.853626899999995,
+    "lon": -118.13395630000001
+  },
+  {
+    "City": "El Cajon",
+    "State": "California",
+    "Population": 102211,
+    "lat": 32.7947731,
+    "lon": -116.96252690000001
+  },
+  {
+    "City": "Rosemead",
+    "State": "California",
+    "Population": 54561,
+    "lat": 34.0805651,
+    "lon": -118.072846
+  },
+  {
+    "City": "Rancho Cucamonga",
+    "State": "California",
+    "Population": 171386,
+    "lat": 34.1063989,
+    "lon": -117.5931084
+  },
+  {
+    "City": "Watsonville",
+    "State": "California",
+    "Population": 52477,
+    "lat": 36.910231,
+    "lon": -121.7568946
+  },
+  {
+    "City": "Carlsbad",
+    "State": "California",
+    "Population": 110972,
+    "lat": 33.158093300000004,
+    "lon": -117.3505939
+  },
+  {
+    "City": "Redding",
+    "State": "California",
+    "Population": 91119,
+    "lat": 40.5865396,
+    "lon": -122.3916754
+  },
+  {
+    "City": "Bakersfield",
+    "State": "California",
+    "Population": 363630,
+    "lat": 35.3732921,
+    "lon": -119.0187125
+  },
+  {
+    "City": "South San Francisco",
+    "State": "California",
+    "Population": 66174,
+    "lat": 37.654656,
+    "lon": -122.40774979999999
+  },
+  {
+    "City": "Whittier",
+    "State": "California",
+    "Population": 86635,
+    "lat": 33.97917929999999,
+    "lon": -118.032844
+  },
+  {
+    "City": "Beaumont",
+    "State": "California",
+    "Population": 40481,
+    "lat": 33.929460600000006,
+    "lon": -116.977248
+  },
+  {
+    "City": "Norwalk",
+    "State": "California",
+    "Population": 106589,
+    "lat": 33.9022367,
+    "lon": -118.08173300000001
+  },
+  {
+    "City": "Highland",
+    "State": "California",
+    "Population": 54291,
+    "lat": 34.1283442,
+    "lon": -117.2086513
+  },
+  {
+    "City": "Rancho Cordova",
+    "State": "California",
+    "Population": 67911,
+    "lat": 38.5890723,
+    "lon": -121.302728
+  },
+  {
+    "City": "Burbank",
+    "State": "California",
+    "Population": 104709,
+    "lat": 34.18083920000001,
+    "lon": -118.30896609999998
+  },
+  {
+    "City": "Fullerton",
+    "State": "California",
+    "Population": 138981,
+    "lat": 33.8703596,
+    "lon": -117.9242966
+  },
+  {
+    "City": "Pico Rivera",
+    "State": "California",
+    "Population": 63771,
+    "lat": 33.9830688,
+    "lon": -118.09673500000001
+  },
+  {
+    "City": "Cerritos",
+    "State": "California",
+    "Population": 49707,
+    "lat": 33.858348299999996,
+    "lon": -118.0647871
+  },
+  {
+    "City": "La Puente",
+    "State": "California",
+    "Population": 40435,
+    "lat": 34.0200114,
+    "lon": -117.94950829999999
+  },
+  {
+    "City": "San Jose",
+    "State": "California",
+    "Population": 998537,
+    "lat": 37.338208200000004,
+    "lon": -121.88632859999998
+  },
+  {
+    "City": "Irvine",
+    "State": "California",
+    "Population": 236716,
+    "lat": 33.6839473,
+    "lon": -117.79469420000001
+  },
+  {
+    "City": "Pacifica",
+    "State": "California",
+    "Population": 38606,
+    "lat": 37.613825299999995,
+    "lon": -122.48691940000002
+  },
+  {
+    "City": "Lancaster",
+    "State": "California",
+    "Population": 159523,
+    "lat": 34.6867846,
+    "lon": -118.1541632
+  },
+  {
+    "City": "Cupertino",
+    "State": "California",
+    "Population": 60189,
+    "lat": 37.322997799999996,
+    "lon": -122.03218229999999
+  },
+  {
+    "City": "Gilroy",
+    "State": "California",
+    "Population": 51701,
+    "lat": 37.0057816,
+    "lon": -121.5682751
+  },
+  {
+    "City": "Fresno",
+    "State": "California",
+    "Population": 509924,
+    "lat": 36.7468422,
+    "lon": -119.7725868
+  },
+  {
+    "City": "San Gabriel",
+    "State": "California",
+    "Population": 40275,
+    "lat": 34.0961111,
+    "lon": -118.10583329999999
+  },
+  {
+    "City": "Redwood City",
+    "State": "California",
+    "Population": 80872,
+    "lat": 37.4852152,
+    "lon": -122.2363548
+  },
+  {
+    "City": "Union City",
+    "State": "California",
+    "Population": 72528,
+    "lat": 37.59339179999999,
+    "lon": -122.0438298
+  },
+  {
+    "City": "Aliso Viejo",
+    "State": "California",
+    "Population": 50175,
+    "lat": 33.5676842,
+    "lon": -117.72560829999999
+  },
+  {
+    "City": "Menifee",
+    "State": "California",
+    "Population": 83447,
+    "lat": 33.6971468,
+    "lon": -117.185294
+  },
+  {
+    "City": "San Ramon",
+    "State": "California",
+    "Population": 74513,
+    "lat": 37.7799273,
+    "lon": -121.9780153
+  },
+  {
+    "City": "Ontario",
+    "State": "California",
+    "Population": 167500,
+    "lat": 34.0633443,
+    "lon": -117.65088759999999
+  },
+  {
+    "City": "Glendale",
+    "State": "California",
+    "Population": 196021,
+    "lat": 34.1425078,
+    "lon": -118.255075
+  },
+  {
+    "City": "Gardena",
+    "State": "California",
+    "Population": 59957,
+    "lat": 33.8883487,
+    "lon": -118.30896240000001
+  },
+  {
+    "City": "West Sacramento",
+    "State": "California",
+    "Population": 49891,
+    "lat": 38.5804609,
+    "lon": -121.53023400000001
+  },
+  {
+    "City": "San Rafael",
+    "State": "California",
+    "Population": 58994,
+    "lat": 37.9735346,
+    "lon": -122.5310874
+  },
+  {
+    "City": "Simi Valley",
+    "State": "California",
+    "Population": 126181,
+    "lat": 34.2694474,
+    "lon": -118.78148200000001
+  },
+  {
+    "City": "West Covina",
+    "State": "California",
+    "Population": 107740,
+    "lat": 34.0686208,
+    "lon": -117.93895259999998
+  },
+  {
+    "City": "Carson",
+    "State": "California",
+    "Population": 92599,
+    "lat": 33.8316745,
+    "lon": -118.28169299999999
+  },
+  {
+    "City": "Santa Maria",
+    "State": "California",
+    "Population": 102216,
+    "lat": 34.953033700000006,
+    "lon": -120.43571909999999
+  },
+  {
+    "City": "La Mesa",
+    "State": "California",
+    "Population": 58642,
+    "lat": 32.7678287,
+    "lon": -117.02308390000002
+  },
+  {
+    "City": "Turlock",
+    "State": "California",
+    "Population": 70365,
+    "lat": 37.494656799999994,
+    "lon": -120.84659409999999
+  },
+  {
+    "City": "Martinez",
+    "State": "California",
+    "Population": 37165,
+    "lat": 38.0193657,
+    "lon": -122.1341321
+  },
+  {
+    "City": "Thousand Oaks",
+    "State": "California",
+    "Population": 128731,
+    "lat": 34.1705609,
+    "lon": -118.83759369999999
+  },
+  {
+    "City": "Azusa",
+    "State": "California",
+    "Population": 47842,
+    "lat": 34.1336186,
+    "lon": -117.90756270000001
+  },
+  {
+    "City": "Torrance",
+    "State": "California",
+    "Population": 147478,
+    "lat": 33.835849200000006,
+    "lon": -118.34062879999999
+  },
+  {
+    "City": "Oakley",
+    "State": "California",
+    "Population": 38194,
+    "lat": 37.9974219,
+    "lon": -121.71245359999999
+  },
+  {
+    "City": "Palo Alto",
+    "State": "California",
+    "Population": 66642,
+    "lat": 37.441883399999995,
+    "lon": -122.14301950000001
+  },
+  {
+    "City": "Brentwood",
+    "State": "California",
+    "Population": 55000,
+    "lat": 37.931868,
+    "lon": -121.6957863
+  },
+  {
+    "City": "Davis",
+    "State": "California",
+    "Population": 66205,
+    "lat": 38.5449065,
+    "lon": -121.74051670000001
+  },
+  {
+    "City": "La Mirada",
+    "State": "California",
+    "Population": 49133,
+    "lat": 33.9172357,
+    "lon": -118.01200859999999
+  },
+  {
+    "City": "Garden Grove",
+    "State": "California",
+    "Population": 175140,
+    "lat": 33.773905299999996,
+    "lon": -117.9414477
+  },
+  {
+    "City": "Lynwood",
+    "State": "California",
+    "Population": 71371,
+    "lat": 33.930293,
+    "lon": -118.21146029999998
+  },
+  {
+    "City": "Los Angeles",
+    "State": "California",
+    "Population": 3884307,
+    "lat": 34.0522342,
+    "lon": -118.24368490000002
+  },
+  {
+    "City": "Yucaipa",
+    "State": "California",
+    "Population": 52536,
+    "lat": 34.033625,
+    "lon": -117.0430865
+  },
+  {
+    "City": "Downey",
+    "State": "California",
+    "Population": 113242,
+    "lat": 33.9401088,
+    "lon": -118.13315929999999
+  },
+  {
+    "City": "South Gate",
+    "State": "California",
+    "Population": 95677,
+    "lat": 33.954737,
+    "lon": -118.21201609999999
+  },
+  {
+    "City": "Huntington Beach",
+    "State": "California",
+    "Population": 197575,
+    "lat": 33.660297,
+    "lon": -117.99922649999999
+  },
+  {
+    "City": "Stanton",
+    "State": "California",
+    "Population": 38623,
+    "lat": 33.802515500000005,
+    "lon": -117.9931165
+  },
+  {
+    "City": "Santa Clara",
+    "State": "California",
+    "Population": 120245,
+    "lat": 37.354107899999995,
+    "lon": -121.9552356
+  },
+  {
+    "City": "Oceanside",
+    "State": "California",
+    "Population": 172794,
+    "lat": 33.1958696,
+    "lon": -117.3794834
+  },
+  {
+    "City": "Lake Forest",
+    "State": "California",
+    "Population": 79312,
+    "lat": 33.6469661,
+    "lon": -117.689218
+  },
+  {
+    "City": "Compton",
+    "State": "California",
+    "Population": 97877,
+    "lat": 33.8958492,
+    "lon": -118.2200712
+  }
+]
