@@ -19,3 +19,9 @@ body {
   flex-direction: column;
 }
 
+#item-card {
+  position: fixed;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
