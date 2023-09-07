@@ -1,15 +1,19 @@
 import {FC, useCallback, useEffect, useRef, useState} from 'react';
 import {createMap, MapApi} from '@unfolded/map-sdk';
-import californiaCities from './data/california-cities.json';
-import arizonaCities from './data/arizona-cities.json';
+import {fetchSampleData} from './sample-data';
 
 export const AppWithCustomUI: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<MapApi | null>(null);
   const [jsonPopupVisible, setJsonPopupVisible] = useState(false);
   const [datasetData, setDatasetData] = useState<any>(null);
+  const [data, setData] = useState<[any, any] | null>(null);
 
   useEffect(() => {
+    const loadData = async () => {
+      setData(await fetchSampleData());
+    };
+
     const initMap = async () => {
       const map = await createMap({
         container: containerRef.current!
@@ -19,10 +23,21 @@ export const AppWithCustomUI: FC = () => {
     };
 
     initMap();
+    loadData();
   }, []);
 
   // Add a dataset to the map
   const handleAddDataset = useCallback(() => {
+    if (!data) {
+      console.log('Data not yet loaded.');
+      return;
+    }
+
+    if (!map) {
+      console.log('Map not yet initialized.');
+      return;
+    }
+
     if (map.getDatasets().length > 0) {
       console.log('Dataset already added to the map. (Example is limited to one dataset).');
       return;
@@ -31,15 +46,25 @@ export const AppWithCustomUI: FC = () => {
     map.addDataset({
       id: 'california-cities',
       label: 'California Cities',
-      data: californiaCities
+      data: data[0]
     });
 
     console.log('Dataset added.');
-  }, [map]);
+  }, [map, data]);
 
   // Update a dataset's studio metadata, including its label and color
   // (viewable in Studio's sidebar)
   const handleUpdateDataset = useCallback(() => {
+    if (!data) {
+      console.log('Data not yet loaded.');
+      return;
+    }
+
+    if (!map) {
+      console.log('Map not yet initialized.');
+      return;
+    }
+
     const datasetId = map.getDatasets()[0]?.id ?? null;
     if (datasetId == null) {
       console.log('No dataset to update');
@@ -52,7 +77,7 @@ export const AppWithCustomUI: FC = () => {
         Math.floor(Math.random() * 256),
         Math.floor(Math.random() * 256),
         Math.floor(Math.random() * 256)
-      ];
+      ] as [number, number, number];
 
       map.updateDataset(datasetId, {
         label: updatedLabel,
@@ -61,11 +86,21 @@ export const AppWithCustomUI: FC = () => {
 
       console.log('Dataset color and label updated.');
     }
-  }, [map]);
+  }, [map, data]);
 
   // Replace the dataset for one with the exact same schema
   // In this example, replace toggles between california/arizona cities
   const handleReplaceDataset = useCallback(() => {
+    if (!data) {
+      console.log('Data not yet loaded.');
+      return;
+    }
+
+    if (!map) {
+      console.log('Map not yet initialized.');
+      return;
+    }
+
     let datasets = map?.getDatasets();
 
     if (!datasets || datasets.length !== 1) {
@@ -77,23 +112,28 @@ export const AppWithCustomUI: FC = () => {
       map.replaceDataset('california-cities', {
         id: 'arizona-cities',
         label: 'Arizona Cities',
-        data: arizonaCities
+        data: data[1]
       });
     } else {
       map.replaceDataset('arizona-cities', {
         id: 'california-cities',
         label: 'California Cities',
-        data: californiaCities
+        data: data[0]
       });
     }
 
     datasets = map.getDatasets();
 
     console.log('Dataset replaced, changed to', datasets[0].label + '.');
-  }, [map]);
+  }, [map, data]);
 
   // Get the dataset on the map and display it in a window
   const handleGetDataset = useCallback(() => {
+    if (!map) {
+      console.log('Map not yet initialized.');
+      return;
+    }
+
     const datasetId = map.getDatasets()[0]?.id ?? null;
     if (datasetId == null) {
       console.log('No dataset to get');
@@ -110,6 +150,11 @@ export const AppWithCustomUI: FC = () => {
 
   // Remove the dataset from the map, if it exists
   const handleRemoveDataset = useCallback(() => {
+    if (!map) {
+      console.log('Map not yet initialized.');
+      return;
+    }
+
     const datasetId = map.getDatasets()[0]?.id ?? null;
     if (datasetId == null) {
       console.log('No dataset to remove');
