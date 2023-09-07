@@ -2,7 +2,7 @@ import {FC, useCallback, useEffect, useRef, useState} from 'react';
 import {createMap, MapApi} from '@unfolded/map-sdk';
 import {fetchSampleData} from './sample-data';
 
-export const AppWithCustomUI: FC = () => {
+export const App: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<MapApi | null>(null);
   const [jsonPopupVisible, setJsonPopupVisible] = useState(false);
