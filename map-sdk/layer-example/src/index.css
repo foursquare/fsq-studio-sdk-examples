@@ -19,3 +19,6 @@ body {
   flex-direction: column;
 }
 
+.controls select {
+  margin-right: 10px; /* Add some spacing between the dropdown and the button */
+}
