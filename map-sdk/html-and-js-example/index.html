@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML and JS example</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      type="module" makes it possible to work with JS modules
+      see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+    -->
+    <script type="module">
+      // we import a bundled version of Map SDK from unpkg CDN
+      import {createMap} from 'https://unpkg.com/@unfolded/map-sdk@latest/dist/index.js';
+
+      // we now can call functions as we would anywhere else
+      const map = createMap({
+        container: document.getElementById('map-container')
+      });
+    </script>
+
+    <div id="map-container"></div>
+  </body>
+</html>
