@@ -1,6 +1,8 @@
-# Map SDK example template
+# Map SDK basic example
 
-This is an example template for Foursquare's [Map SDK](https://location.foursquare.com/developer/docs/studio-map-sdk-introduction) that allows you to programmatically render [Foursquare Studio](https://studio.foursquare.com/) maps within your website and with your own data.
+This example demonstrates how to load an empty map.
+
+This is an example for Foursquare's [Map SDK](https://location.foursquare.com/developer/docs/studio-map-sdk-introduction) that allows you to programmatically render [Foursquare Studio](https://studio.foursquare.com/) maps within your website and with your own data.
 
 The project was bootstrapped with [Vite](https://vitejs.dev/guide/).
 
