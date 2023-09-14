@@ -807,14 +807,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unfolded/map-sdk@npm:^1.9.1":
-  version: 1.9.1
-  resolution: "@unfolded/map-sdk@npm:1.9.1"
+"@unfolded/map-sdk@npm:^1.10.0":
+  version: 1.10.0
+  resolution: "@unfolded/map-sdk@npm:1.10.0"
   dependencies:
     "@types/geojson": "npm:^7946.0.10"
     csstype: "npm:^3.1.0"
     type-fest: "npm:^2.12.2"
-  checksum: 2952177c32b7a640316488c3eb015eae0830365c3573232ace1a448eda63052108221322cacebb64c6adbe3438a3f7d7277fc8dd1d38a0997311a0581583fe80
+  checksum: a8d802dcdbe51a47666767873afdde374107a29946f722fc21ed92636d752c44d93577a7c4f12a84666e4eaf6ed2f1250eb3aab953ebdaf769be496642f36303
   languageName: node
   linkType: hard
 
@@ -1513,7 +1513,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.7"
     "@typescript-eslint/eslint-plugin": "npm:^6.2.1"
     "@typescript-eslint/parser": "npm:^6.2.1"
-    "@unfolded/map-sdk": "npm:^1.9.1"
+    "@unfolded/map-sdk": "npm:^1.10.0"
     "@vitejs/plugin-react": "npm:^4.0.4"
     eslint: "npm:^8.46.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
