@@ -1,6 +1,6 @@
-# Map SDK basic example
+# Map SDK Effects example
 
-A Map SDK effects example.
+A Map SDK post-processing effects example.
 
 This is an example for Foursquare's [Map SDK](https://location.foursquare.com/developer/docs/studio-map-sdk-introduction) that allows you to programmatically render [Foursquare Studio](https://studio.foursquare.com/) maps within your website and with your own data.
 
