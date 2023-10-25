@@ -1,3 +1,9 @@
+## Data
+
+- [`housing.csv`](https://4sq-studio-public.s3.us-west-2.amazonaws.com/sdk/examples/sample-data/housing.csv) comes from Kaggle's [California Housing Prices](https://www.kaggle.com/camnugent/california-housing-prices) dataset under the CC0 license.
+- [`lisbon_uber_traversals.csv`](https://4sq-studio-public.s3.us-west-2.amazonaws.com/sdk/examples/sample-data/lisbon_uber_traversals.csv) comes from Uber's [open data platform](https://movement.uber.com/?lang=en-US).
+- [`portugal_popularity.csv`](https://4sq-studio-public.s3.us-west-2.amazonaws.com/sdk/examples/sample-data/portugal_popularity.csv) comes from [Kuwala's popularity pipeline](https://github.com/kuwala-io/kuwala).
+
 ## Custom STAC Examples
 
 Here you can find several examples of custom STAC files that work with Studio's custom raster support.
