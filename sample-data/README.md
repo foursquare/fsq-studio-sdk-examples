@@ -1,3 +1,5 @@
+These are the datasets used in the examples and these are their sources:
+
 ## Data
 
 - [`housing.csv`](https://4sq-studio-public.s3.us-west-2.amazonaws.com/sdk/examples/sample-data/housing.csv) comes from Kaggle's [California Housing Prices](https://www.kaggle.com/camnugent/california-housing-prices) dataset under the CC0 license.
