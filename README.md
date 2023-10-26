@@ -15,7 +15,7 @@ This repository contains sample code for [Foursquare Studio](https://studio.four
 
 ## Studio Map SDK
 
-https://github.com/foursquare/fsq-studio-sdk-examples/assets/1355455/75ee309f-13e6-415c-b425-3912ebfecc83
+https://github.com/foursquare/fsq-studio-sdk-examples/assets/1355455/03130a27-15f1-4725-8fea-a54f9a6554a7
 
 The Studio Map SDK lets you embed and control [Studio](https://studio.foursquare.com/) maps from:
 
