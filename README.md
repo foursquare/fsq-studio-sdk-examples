@@ -1,46 +1,39 @@
-# Unfolded Examples
+# Foursquare Studio Map SDK and Data SDK Examples
 
 [![Binder][binder_badge]][binder_jupyterlab_url]
 [![open_in_colab][colab_badge]][colab_notebook_link]
 
 [binder_badge]: https://mybinder.org/badge_logo.svg
-[binder_jupyterlab_url]: https://mybinder.org/v2/gh/foursquare/unfolded-sdk-examples/master?urlpath=lab/tree/notebooks/
+[binder_jupyterlab_url]: https://mybinder.org/v2/gh/foursquare/fsq-studio-sdk-examples/master
 [colab_badge]: https://colab.research.google.com/assets/colab-badge.svg
-[colab_notebook_link]: https://colab.research.google.com/github/foursquare/unfolded-sdk-examples/blob/master
+[colab_notebook_link]: https://colab.research.google.com/github/foursquare/fsq-studio-sdk-examples/blob/master
 
-This repository contains sample code for [Unfolded](https://unfolded.ai) APIs, including
+This repository contains sample code for [Foursquare Studio](https://studio.foursquare.com/) SDKs, including:
 
-- [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk)
-- [Unfolded Data SDK](https://docs.unfolded.ai/data-sdk)
-- [Unfolded Jupyter Notebook Integration](https://docs.unfolded.ai/jupyter)
+- [Studio Map SDK](https://location.foursquare.com/developer/docs/studio-map-sdk-introduction)
+- [Studio Data SDK](https://location.foursquare.com/developer/docs/data-sdk-introduction)
 
-## Unfolded Map SDK
+## Studio Map SDK
 
-![Map SDK Preview](images/out.gif)
+https://github.com/foursquare/fsq-studio-sdk-examples/assets/1355455/75ee309f-13e6-415c-b425-3912ebfecc83
 
-The Unfolded Map SDK lets you embed and control Unfolded maps from:
+The Studio Map SDK lets you embed and control [Studio](https://studio.foursquare.com/) maps from:
 
-- Your own web pages, using the [JavaScript Map SDK](https://docs.unfolded.ai/map-sdk/javascript-map-sdk).
-- Jupyter notebooks, using the [Python Map SDK](https://docs.unfolded.ai/map-sdk/python-map-sdk).
+- Your own web pages, using the [Typescript Map SDK](https://location.foursquare.com/developer/docs/studio-map-sdk-setup-guide#javascript-setup)
+- Jupyter notebooks, using the [Python Map SDK](https://location.foursquare.com/developer/docs/studio-map-sdk-setup-guide#python-setup)
 
 The Map SDK makes it easy to:
 
-- Do exploratory geospatial analytics and data science in Jupyter Notebooks.
-- Build web pages that embed published Unfolded Studio maps.
-- Create bespoke styling and interactions for Unfolded Studio maps.
-- Integrate Unfolded maps into your organization's workflows.
+- Do exploratory geospatial analytics and data science in Jupyter Notebooks
+- Build web pages that embed published Foursquare Studio maps
+- Create bespoke styling and interactions for Foursquare Studio maps
+- Integrate Studio maps into your organization's workflows
 
-### JavaScript examples
+## Studio Data SDK
 
-[![badges](./images/badges/javascript.svg)](/map-sdk) [![badges](./images/badges/angular.svg)](/map-sdk/angular) [![badges](./images/badges/react.svg)](/map-sdk/react) [![badges](./images/badges/vue.svg)](/map-sdk/vuejs) [![badges](./images/badges/svelte.svg)](/map-sdk/svelte)
+The Studio Data SDK is a Python library that provides APIs to access the [Studio](https://studio.foursquare.com/) platform, allowing your applications to:
 
-In the [/map-sdk](/map-sdk) directory you can find examples on how to use our Unfolded's Map SDK with [Angular](https://angular.io/), [React](https://reactjs.org/), [Vue.js](https://vuejs.org/), and [Svelte](https://svelte.dev/) frameworks.
-All of the examples are based on the respective framework's starter projects with the added Unfolded's Map SDK integration.
-
-Some of the following features are included in the examples:
-- Create and include the Unfolded Studio map in your project
-- Get the information about the available map layers
-- Set the layer visibility (show/hide)
-- Set the map's view state - position the view on a certain location with the provided zoom level
-
-Note: For additional Map SDK features please visit our [official documentation page](https://docs.unfolded.ai/map-sdk/).
+- Authenticate with the Studio platform
+- Access your geospatial assets (such as maps and datasets)
+- Invoke Studio analytics services such as enrichment from your own applications
+- Start pipeline tasks for bulk processing of geospatial data
