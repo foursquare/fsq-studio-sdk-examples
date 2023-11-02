@@ -1,6 +1,5 @@
 import { FC, useEffect, useRef } from "react";
 import { createMap } from "@unfolded/map-sdk";
-// import { createMap } from "http://localhost:8090/index.js";
 import { editorContent } from "./editor-content";
 
 export const App: FC = () => {
@@ -18,7 +17,7 @@ export const App: FC = () => {
         isVisible: true,
         autoSize: true,
         autoSizeY: true,
-        anchorPoint: [-120.913995, 36.007],
+        anchorPoint: [-122.4194, 37.7749],
         label: "Richtext annotation",
         editorState: editorContent,
         lineColor: "#C32899",
