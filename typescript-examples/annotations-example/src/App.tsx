@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef } from "react";
-import { createMap } from "@unfolded/map-sdk";
+import { createMap } from "@foursquare/map-sdk";
 import { editorContent } from "./editor-content";
 
 export const App: FC = () => {
@@ -8,6 +8,7 @@ export const App: FC = () => {
   useEffect(() => {
     const initMap = async () => {
       const map = await createMap({
+        token: "TODO",
         container: containerRef.current!,
       });
 
