@@ -1,5 +1,10 @@
 import { FC, useEffect, useMemo, useRef, useState } from "react";
-import { createMap, Dataset, MapApi } from "@foursquare/map-sdk";
+import {
+  createMap,
+  Dataset,
+  DatasetWithData,
+  MapApi,
+} from "@foursquare/map-sdk";
 import { SampleDataItem, fetchSampleData } from "./sample-data";
 
 const getFirstDataset = (map: MapApi): Dataset => {
@@ -14,9 +19,8 @@ const getFirstDataset = (map: MapApi): Dataset => {
 export const App: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<MapApi | null>(null);
-  const [dispalyedDataset, setDisplayedDataset] = useState<unknown | null>(
-    null
-  );
+  const [displayedDataset, setDisplayedDataset] =
+    useState<DatasetWithData | null>(null);
   const [sampleData, setSampleData] = useState<
     [SampleDataItem, SampleDataItem] | null
   >(null);
@@ -120,11 +124,11 @@ export const App: FC = () => {
       )}
 
       {/* JSON popup */}
-      {!!dispalyedDataset && (
+      {!!displayedDataset && (
         <div className="json-popup">
           <div className="json-popup-content">
             <button onClick={() => setDisplayedDataset(null)}>Close</button>
-            <pre>{JSON.stringify(dispalyedDataset, null, 2)}</pre>
+            <pre>{JSON.stringify(displayedDataset, null, 2)}</pre>
           </div>
         </div>
       )}
