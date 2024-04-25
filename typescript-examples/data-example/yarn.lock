@@ -490,6 +490,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@foursquare/map-sdk@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@foursquare/map-sdk@npm:2.0.0"
+  dependencies:
+    "@types/geojson": "npm:^7946.0.10"
+    csstype: "npm:^3.1.0"
+  checksum: 037f1b04897c2f3b013e9471dbfac9c2afc5466a1b417c4375ce213226cadcefde38b27c72fd23c9743dfefcb0a4ba68b0a506f8fcb182063d30568bab7ca4c4
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -899,17 +909,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unfolded/map-sdk@npm:^1.13.0":
-  version: 1.13.0
-  resolution: "@unfolded/map-sdk@npm:1.13.0"
-  dependencies:
-    "@types/geojson": "npm:^7946.0.10"
-    csstype: "npm:^3.1.0"
-    type-fest: "npm:^2.12.2"
-  checksum: d2b642522714963babb118f179a47ef796e8c46f4428a4bc27038791d75f7df88b4c61f9dd4a52c218bed993f897c3edd86ff0c902e4871a51ec54fde64035ab
-  languageName: node
-  linkType: hard
-
 "@vitejs/plugin-react@npm:^4.0.4":
   version: 4.0.4
   resolution: "@vitejs/plugin-react@npm:4.0.4"
@@ -1261,12 +1260,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "data-example@workspace:."
   dependencies:
+    "@foursquare/map-sdk": "npm:2.0.0"
     "@types/eslint": "npm:^8.44.2"
     "@types/react": "npm:^18.2.18"
     "@types/react-dom": "npm:^18.2.7"
     "@typescript-eslint/eslint-plugin": "npm:^6.2.1"
     "@typescript-eslint/parser": "npm:^6.2.1"
-    "@unfolded/map-sdk": "npm:^1.13.0"
     "@vitejs/plugin-react": "npm:^4.0.4"
     eslint: "npm:^8.46.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
@@ -2967,13 +2966,6 @@ __metadata:
   version: 0.20.2
   resolution: "type-fest@npm:0.20.2"
   checksum: 9f39d342df851a98443ee9858345a8943bb71ffbf35eee36a2716ba601e810b46294a98ee78b39376120c349d6b2631979cb91afc8be6ea41b8d04eddc55f4d5
-  languageName: node
-  linkType: hard
-
-"type-fest@npm:^2.12.2":
-  version: 2.19.0
-  resolution: "type-fest@npm:2.19.0"
-  checksum: d63c7c5fd7583cc6d35ccd23e96686eeb1e6f387c83a858625734ea2cf974c6be38bcbc43663da5e10469a1b4119089def1e8def03bf2aee540f0ad4fcd25902
   languageName: node
   linkType: hard
 

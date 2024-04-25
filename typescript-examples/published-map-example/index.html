@@ -13,9 +13,10 @@
     <div id="map-container"></div>
 
     <script type="module">
-      import {createMap} from 'https://cdn.jsdelivr.net/npm/@unfolded/map-sdk@latest/dist/index.js';
+      import {createMap} from 'https://cdn.jsdelivr.net/npm/@foursquare/map-sdk@latest/dist/index.js';
 
       const map = await createMap({
+        apiKey: "<your-api-key>",
         container: document.getElementById('map-container'),
         // this loads a published map
         // (original url: https://studio.foursquare.com/public/806b95d0-36bb-402c-b16c-24e54af4a761)

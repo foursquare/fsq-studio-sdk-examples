@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react";
-import { createMap, MapApi } from "@unfolded/map-sdk";
+import { createMap, MapApi } from "@foursquare/map-sdk";
 
 export const App: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -8,6 +8,7 @@ export const App: FC = () => {
   useEffect(() => {
     const initMap = async () => {
       const map = await createMap({
+        apiKey: "<your-api-key>",
         container: containerRef.current!,
       });
 

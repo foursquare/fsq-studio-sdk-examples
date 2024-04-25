@@ -18,5 +18,5 @@ sidecar
 tensorflow
 torch
 unfolded.data-sdk>=0.7.0
-unfolded.map-sdk>=1.0.0
+foursquare.map-sdk>=2.0.0
 xarray

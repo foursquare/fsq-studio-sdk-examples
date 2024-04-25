@@ -1,11 +1,16 @@
-import {FC, useEffect, useMemo, useRef, useState} from 'react';
-import {createMap, Dataset, MapApi} from '@unfolded/map-sdk';
-import {SampleDataItem, fetchSampleData} from './sample-data';
+import { FC, useEffect, useMemo, useRef, useState } from "react";
+import {
+  createMap,
+  Dataset,
+  DatasetWithData,
+  MapApi,
+} from "@foursquare/map-sdk";
+import { SampleDataItem, fetchSampleData } from "./sample-data";
 
 const getFirstDataset = (map: MapApi): Dataset => {
   const dataset = map.getDatasets()[0];
   if (!dataset) {
-    throw new Error('No dataset.');
+    throw new Error("No dataset.");
   } else {
     return dataset;
   }
@@ -14,8 +19,11 @@ const getFirstDataset = (map: MapApi): Dataset => {
 export const App: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<MapApi | null>(null);
-  const [dispalyedDataset, setDisplayedDataset] = useState<unknown | null>(null);
-  const [sampleData, setSampleData] = useState<[SampleDataItem, SampleDataItem] | null>(null);
+  const [displayedDataset, setDisplayedDataset] =
+    useState<DatasetWithData | null>(null);
+  const [sampleData, setSampleData] = useState<
+    [SampleDataItem, SampleDataItem] | null
+  >(null);
 
   useEffect(() => {
     const loadData = async () => {
@@ -24,7 +32,8 @@ export const App: FC = () => {
 
     const initMap = async () => {
       const map = await createMap({
-        container: containerRef.current!
+        apiKey: "<your-api-key>",
+        container: containerRef.current!,
       });
 
       setMap(map);
@@ -36,19 +45,21 @@ export const App: FC = () => {
 
   const handlers = useMemo(() => {
     if (!sampleData) {
-      console.log('Data not yet loaded.');
+      console.log("Data not yet loaded.");
       return null;
     }
 
     if (!map) {
-      console.log('Map not yet initialized.');
+      console.log("Map not yet initialized.");
       return null;
     }
 
     return {
       addDataset: () => {
         if (map.getDatasets().length > 0) {
-          console.log('Dataset already added to the map. (Example is limited to one dataset).');
+          console.log(
+            "Dataset already added to the map. (Example is limited to one dataset)."
+          );
           return;
         }
 
@@ -56,23 +67,23 @@ export const App: FC = () => {
       },
       updateDataset: () => {
         const dataset = getFirstDataset(map);
-        const updatedLabel = 'Updated Dataset';
+        const updatedLabel = "Updated Dataset";
         const updatedColor = [
           Math.floor(Math.random() * 256),
           Math.floor(Math.random() * 256),
-          Math.floor(Math.random() * 256)
+          Math.floor(Math.random() * 256),
         ] as [number, number, number];
 
         map.updateDataset(dataset.id, {
           label: updatedLabel,
-          color: updatedColor
+          color: updatedColor,
         });
       },
       replaceDataset: () => {
         map.replaceDataset(sampleData[0].id, {
           id: sampleData[1].id,
           label: sampleData[1].label,
-          data: sampleData[1].data
+          data: sampleData[1].data,
         });
 
         // round robin swap
@@ -86,13 +97,21 @@ export const App: FC = () => {
       removeDataset: () => {
         const dataset = getFirstDataset(map);
         map.removeDataset(dataset.id);
-      }
+      },
     };
   }, [map, sampleData]);
 
   return (
     <>
-      <div id="map-container" ref={containerRef}></div>
+      <div
+        id="map-container"
+        ref={containerRef}
+        style={{
+          width: "640px",
+          height: "480px",
+          border: "1px solid red",
+        }}
+      ></div>
       {!!handlers && (
         <div className="controls">
           {/* Buttons for various dataset operations */}
@@ -105,11 +124,11 @@ export const App: FC = () => {
       )}
 
       {/* JSON popup */}
-      {!!dispalyedDataset && (
+      {!!displayedDataset && (
         <div className="json-popup">
           <div className="json-popup-content">
             <button onClick={() => setDisplayedDataset(null)}>Close</button>
-            <pre>{JSON.stringify(dispalyedDataset, null, 2)}</pre>
+            <pre>{JSON.stringify(displayedDataset, null, 2)}</pre>
           </div>
         </div>
       )}

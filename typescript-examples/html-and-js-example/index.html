@@ -23,10 +23,11 @@
     -->
     <script type="module">
       // we import a bundled version of Map SDK from a CDN
-      import {createMap} from 'https://cdn.jsdelivr.net/npm/@unfolded/map-sdk@latest/dist/index.js';
+      import {createMap} from 'https://cdn.jsdelivr.net/npm/@foursquare/map-sdk@latest/dist/index.js';
 
       // we now can call functions as we would anywhere else
       const map = await createMap({
+        apiKey: "<your-api-key>",
         container: document.getElementById('map-container')
       });
     </script>
