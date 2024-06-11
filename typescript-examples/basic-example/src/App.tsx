@@ -8,7 +8,7 @@ export const App: FC = () => {
   useEffect(() => {
     const initMap = async () => {
       const map = await createMap({
-        apiKey: "<your-api-key>",
+        apiKey: "fsq3CYDP77ybwoo1KtkJigGRj6g0uYyhWVw25jM+zN6ovbI=",
         container: containerRef.current!,
       });
 
