@@ -490,13 +490,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foursquare/map-sdk@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@foursquare/map-sdk@npm:2.0.0"
+"@foursquare/map-sdk@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@foursquare/map-sdk@npm:3.0.1"
   dependencies:
     "@types/geojson": "npm:^7946.0.10"
     csstype: "npm:^3.1.0"
-  checksum: 037f1b04897c2f3b013e9471dbfac9c2afc5466a1b417c4375ce213226cadcefde38b27c72fd23c9743dfefcb0a4ba68b0a506f8fcb182063d30568bab7ca4c4
+  checksum: 850777586c636ffa4a86d203f101a93c76eee5901413710a922f523338ecb163dc931702c9ddd12b6a92986f400bb79a7312e4be9bcd61f925191ea8e91e2a6c
   languageName: node
   linkType: hard
 
@@ -1260,7 +1260,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "data-example@workspace:."
   dependencies:
-    "@foursquare/map-sdk": "npm:2.0.0"
+    "@foursquare/map-sdk": "npm:^3.0.1"
     "@types/eslint": "npm:^8.44.2"
     "@types/react": "npm:^18.2.18"
     "@types/react-dom": "npm:^18.2.7"

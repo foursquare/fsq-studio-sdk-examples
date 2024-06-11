@@ -32,7 +32,7 @@ export const App: FC = () => {
 
     const initMap = async () => {
       const map = await createMap({
-        apiKey: "<your-api-key>",
+        apiKey: "fsq3xmchm2MR7alFdHFopcPvLY3QvY2A1CnyIYEqxJ1Mdy8=",
         container: containerRef.current!,
       });
 
@@ -103,15 +103,7 @@ export const App: FC = () => {
 
   return (
     <>
-      <div
-        id="map-container"
-        ref={containerRef}
-        style={{
-          width: "640px",
-          height: "480px",
-          border: "1px solid red",
-        }}
-      ></div>
+      <div id="map-container" ref={containerRef}></div>
       {!!handlers && (
         <div className="controls">
           {/* Buttons for various dataset operations */}
