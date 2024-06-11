@@ -8,6 +8,9 @@ export const App: FC = () => {
   useEffect(() => {
     const initMap = async () => {
       const map = await createMap({
+        // This is an API Key that only works for these examples.
+        // Provide your own Map SDK API Key instead.
+        // For more details, see: https://docs.foursquare.com/developer/docs/studio-map-sdk-authentication
         apiKey: "fsq3CYDP77ybwoo1KtkJigGRj6g0uYyhWVw25jM+zN6ovbI=",
         container: containerRef.current!,
       });
