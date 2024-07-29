@@ -17,6 +17,6 @@ seaborn
 sidecar
 tensorflow
 torch
-unfolded.data-sdk>=0.7.0
-foursquare.map-sdk>=2.0.0
+foursquare.data-sdk
+foursquare.map-sdk
 xarray
